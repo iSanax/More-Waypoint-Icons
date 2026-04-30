@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_borax.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1"
+     inkscape:cx="57"
+     inkscape:cy="401"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect4"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="M 80.073494,25.159254 V 154.84075 h 37.801316 c 12.1181,0 22.15628,-3.4365 30.11444,-10.30945 7.95816,-6.87295 11.93726,-15.85556 11.93726,-26.94874 0,-8.92278 -2.62259,-16.15751 -7.86774,-21.704109 -5.24515,-5.606882 -12.23872,-8.922799 -20.98063,-9.947713 v -0.361735 c 6.99353,-2.290984 12.47986,-6.149505 16.45894,-11.575521 3.97908,-5.426015 5.96863,-11.816691 5.96863,-19.171956 0,-8.802203 -3.28577,-15.946496 -9.85728,-21.4328 -6.57151,-5.486305 -15.4642,-8.229472 -26.67796,-8.229472 z m 15.192871,13.745931 h 17.453715 c 16.57949,0 24.86929,6.300241 24.86929,18.900655 0,7.294976 -2.38143,12.962179 -7.14427,17.001546 -4.76284,3.979078 -11.30424,5.968628 -19.62413,5.968628 H 95.266365 Z m 0,55.526326 h 17.453715 c 20.86002,0 31.29009,7.656759 31.29009,22.970179 0,7.35526 -2.47187,13.14253 -7.41557,17.36276 -4.88342,4.22024 -11.78656,6.33037 -20.70934,6.33037 H 95.266365 Z" />
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+{
+	"game:wpSuggestion-conveyance_boat": "Boat",
+	"game:wpSuggestion-conveyance_raft": "Raft",
+
+
+
+	"game:wpSuggestion-food_berry_beautyberry": "Beautyberry",
+	"game:wpSuggestion-food_berry_black_rasp_berry": "Berry",
+	"game:wpSuggestion-food_berry_black_red_white_currant": "Currant",
+	"game:wpSuggestion-food_berry_blueberry": "Blueberry",
+	"game:wpSuggestion-food_berry_cloudberry": "Cloudberry",
+	"game:wpSuggestion-food_berry_cranberry": "Cranberry",
+	"game:wpSuggestion-food_berry_strawberry": "Strawberry",
+
+	"game:wpSuggestion-food_fruit_tree_apple": "Apple",
+	"game:wpSuggestion-food_fruit_tree_breadfruit": "Breadfruit",
+	"game:wpSuggestion-food_fruit_tree_cherry": "Cherry",
+	"game:wpSuggestion-food_fruit_tree_lychee": "Lychee",
+	"game:wpSuggestion-food_fruit_tree_mango": "Mango",
+	"game:wpSuggestion-food_fruit_tree_olive": "Olive",
+	"game:wpSuggestion-food_fruit_tree_orange": "Orange",
+	"game:wpSuggestion-food_fruit_tree_peach": "Peach",
+	"game:wpSuggestion-food_fruit_tree_pear": "Pear",
+	"game:wpSuggestion-food_fruit_tree_pomegranate": "Pomegranate",
+
+	"game:wpSuggestion-food_mushroom_edible_non_psychedelic": "Edible mushroom",
+	"game:wpSuggestion-food_mushroom_edible_psychedelic": "Edible mushroom - Psychedelic",
+	"game:wpSuggestion-food_mushroom_poisonous_non_psychedelic": "Poisonous mushroom",
+	"game:wpSuggestion-food_mushroom_poisonous_psychedelic": "Poisonous mushroom - Psychedelic",
+
+
+
+	"game:wpSuggestion-ore_aluminum": "Aluminum",
+	"game:wpSuggestion-ore_bismuth": "Bismuth",
+	"game:wpSuggestion-ore_borax": "Borax",
+	"game:wpSuggestion-ore_cinnabar": "Cinnabar",
+	"game:wpSuggestion-ore_coal": "Coal",
+	"game:wpSuggestion-ore_copper": "Copper",
+	"game:wpSuggestion-ore_fluorite": "Fluorite",
+	"game:wpSuggestion-ore_chromium": "Chromium",
+	"game:wpSuggestion-ore_gold": "Gold",
+	"game:wpSuggestion-ore_iron": "Iron",
+	"game:wpSuggestion-ore_iron_meteoritic": "Meteoritic iron",
+	"game:wpSuggestion-ore_lead": "Lead",
+	"game:wpSuggestion-ore_manganese": "Manganese",
+	"game:wpSuggestion-ore_nickel": "Nickel",
+	"game:wpSuggestion-ore_phosphorus": "Phosphorus",
+	"game:wpSuggestion-ore_platinum": "Platinum",
+	"game:wpSuggestion-ore_potassium": "Potassium",
+	"game:wpSuggestion-ore_rhodium": "Rhodium",
+	"game:wpSuggestion-ore_silicon": "Silicon",
+	"game:wpSuggestion-ore_silver": "Silver",
+	"game:wpSuggestion-ore_sodium": "Sodium",
+	"game:wpSuggestion-ore_sulfur": "Sulfur",
+	"game:wpSuggestion-ore_tin": "Tin",
+	"game:wpSuggestion-ore_titanium": "Titanium",
+	"game:wpSuggestion-ore_uranium": "Uranium",
+	"game:wpSuggestion-ore_zink": "Zinc",
+
+
+
+	"game:wpSuggestion-trader_agriculture": "Agriculture trader",
+	"game:wpSuggestion-trader_artisan": "Artisan trader",
+	"game:wpSuggestion-trader_buildingMaterials": "Building  Materials trader",
+	"game:wpSuggestion-trader_clothing": "Clothing trader",
+	"game:wpSuggestion-trader_commodities": "Commodities trader",
+	"game:wpSuggestion-trader_furniture": "Furniture trader",
+	"game:wpSuggestion-trader_luxuries": "Luxuries trader",
+	"game:wpSuggestion-trader_survivalGoods": "Survival Goods trader",
+	"game:wpSuggestion-trader_treasure": "Treasure trader",
+
+
+
+	"game:wpSuggestion-other_flora_flower": "Flower",
+	"game:wpSuggestion-other_high_fertility_soil": "High fertility soil",
+	"game:wpSuggestion-other_resin": "Resin",
+	"game:wpSuggestion-other_torf": "Torf"
+}

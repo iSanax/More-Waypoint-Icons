@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_sodium.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="16.970563"
+     inkscape:cy="373.35238"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="text1"
+       style="font-size:185.208px;line-height:0;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="M 18.578711 24.073983 L 18.578711 153.75547 L 33.771582 153.75547 L 33.771582 60.066618 C 33.771582 50.96297 33.530424 45.024465 33.048112 42.251168 L 33.590715 42.251168 C 34.675918 45.084754 36.062574 47.797776 37.750667 50.390206 L 104.49078 153.75547 L 123.12013 153.75547 L 123.12013 24.073983 L 107.92726 24.073983 L 107.92726 115.41208 C 107.92726 124.39515 108.22871 130.75516 108.8316 134.49308 L 108.46986 134.49308 C 107.68611 132.92557 105.93771 130.03168 103.22471 125.81144 L 38.29327 24.073983 L 18.578711 24.073983 z M 188.77452 58.981413 C 176.89758 58.981413 166.40774 61.875304 157.30409 67.663053 L 157.30409 82.855924 C 166.28716 75.259503 176.35498 71.461271 187.50845 71.461271 C 200.22944 71.461271 206.58997 79.329037 206.58997 95.064482 L 178.82681 98.953133 C 158.44911 101.78672 148.26072 111.85453 148.26072 129.15749 C 148.26072 137.23623 150.85316 143.71733 156.03802 148.60075 C 161.28317 153.48416 168.51738 155.92588 177.74161 155.92588 C 190.28173 155.92588 199.77731 150.37926 206.22824 139.28607 L 206.58997 139.28607 L 206.58997 153.75547 L 221.42111 153.75547 L 221.42111 93.527108 C 221.42111 70.496687 210.53887 58.981413 188.77452 58.981413 z M 206.58997 106.9113 L 206.58997 116.13555 C 206.58997 124.03341 204.1784 130.5743 199.35527 135.75916 C 194.59244 140.88373 188.53335 143.44602 181.17809 143.44602 C 175.81236 143.44602 171.50219 142.02922 168.24658 139.19564 C 165.05126 136.30176 163.45359 132.59397 163.45359 128.07229 C 163.45359 121.86251 165.20198 117.55234 168.69875 115.14078 C 172.19551 112.66892 177.37988 110.95068 184.25284 109.98605 L 206.58997 106.9113 z " />
+  </g>
+</svg>

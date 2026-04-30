@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_coal.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="16.970563"
+     inkscape:cy="247.48737"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect4"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="m 137.81571,22.988841 c -19.17192,0 -34.99789,6.390675 -47.477723,19.171956 C 77.858152,54.942078 71.6182,71.702529 71.6182,92.441966 c 0,19.292504 5.546625,34.876794 16.639812,46.753744 11.093187,11.87694 25.864088,17.81545 44.312538,17.81545 14.28851,0 26.22529,-2.53216 35.81125,-7.59644 v -14.7407 c -9.52567,5.78775 -20.79927,8.68164 -33.8217,8.68164 -14.04736,0 -25.41191,-4.67243 -34.09353,-14.01723 -8.621337,-9.40509 -12.932028,-22.00506 -12.932028,-37.800802 0,-16.63978 4.612138,-29.933592 13.836368,-39.881287 9.28451,-9.947694 21.37254,-14.921569 36.26393,-14.921569 11.21377,0 21.46245,2.592444 30.74696,7.777303 V 28.324432 c -8.07873,-3.557054 -18.26712,-5.335591 -30.56609,-5.335591 z" />
+  </g>
+</svg>

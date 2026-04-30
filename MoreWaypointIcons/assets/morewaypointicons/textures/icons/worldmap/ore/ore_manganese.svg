@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_manganese.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="288.49957"
+     inkscape:cy="328.09755"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="text1"
+       style="font-size:185.208px;line-height:0;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="M -0.59324544 25.159188 L -0.59324544 154.84068 L 14.057023 154.84068 L 14.057023 68.024788 C 14.057023 56.268422 13.815866 47.797762 13.333553 42.612903 L 13.695288 42.612903 C 15.021647 48.58152 16.317869 53.01279 17.58394 55.906665 L 61.806047 154.84068 L 69.221615 154.84068 L 113.53416 55.183195 C 114.67965 52.651054 115.97587 48.460942 117.42281 42.612903 L 117.78454 42.612903 C 116.94049 52.560598 116.51847 60.970968 116.51847 67.843921 L 116.51847 154.84068 L 131.62091 154.84068 L 131.62091 25.159188 L 112.62982 25.159188 L 72.025061 115.23121 C 70.457545 118.72797 68.377561 124.03292 65.785132 131.14703 L 65.242529 131.14703 C 64.338193 127.71056 62.348643 122.52619 59.273901 115.59294 L 19.483049 25.159188 L -0.59324544 25.159188 z M 209.30299 60.066618 C 196.03939 60.066618 185.91078 65.914689 178.91724 77.610767 L 178.55551 77.610767 L 178.55551 62.237028 L 163.72489 62.237028 L 163.72489 154.84068 L 178.55551 154.84068 L 178.55551 102.02788 C 178.55551 93.527123 180.96709 86.503409 185.79021 80.956816 C 190.67362 75.349933 196.82314 72.546476 204.2387 72.546476 C 218.58749 72.546476 225.76193 82.373647 225.76193 102.02788 L 225.76193 154.84068 L 240.59307 154.84068 L 240.59307 98.229663 C 240.59307 85.870406 237.91019 76.435116 232.54446 69.923897 C 227.17874 63.35239 219.43155 60.066618 209.30299 60.066618 z " />
+  </g>
+</svg>

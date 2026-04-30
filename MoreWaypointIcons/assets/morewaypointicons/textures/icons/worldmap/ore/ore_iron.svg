@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_iron.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="16.970563"
+     inkscape:cy="480.83261"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect4"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="M 38.564571 24.073983 L 38.564571 153.75547 L 53.757442 153.75547 L 53.757442 96.330554 L 100.60213 96.330554 L 100.60213 82.675057 L 53.757442 82.675057 L 53.757442 37.819914 L 104.40035 37.819914 L 104.40035 24.073983 L 38.564571 24.073983 z M 163.36316 58.981413 C 151.24505 58.981413 141.08629 63.533262 132.88698 72.63691 C 124.74796 81.680269 120.67842 93.406557 120.67842 107.81564 C 120.67842 123.06877 124.41636 134.91512 131.89221 143.35559 C 139.36805 151.73577 149.64739 155.92588 162.73012 155.92588 C 176.11429 155.92588 186.87543 152.9717 195.01445 147.06337 L 195.01445 133.13658 C 186.27254 140.00953 176.68704 143.44602 166.25704 143.44602 C 156.97252 143.44602 149.6775 140.64257 144.37207 135.03569 C 139.06663 129.4288 136.29332 121.47112 136.05216 111.16169 L 201.43525 111.16169 L 201.43525 103.38439 C 201.43525 89.457611 198.11933 78.575379 191.48754 70.737801 C 184.85574 62.900223 175.48126 58.981413 163.36316 58.981413 z M 163.09185 71.461271 C 170.32654 71.461271 175.96308 73.842702 180.00245 78.605538 C 184.10211 83.368374 186.18209 90.030352 186.24238 98.591398 L 136.23303 98.591398 C 137.37852 90.512664 140.39299 83.971265 145.2764 78.967273 C 150.15982 73.963281 156.09832 71.461271 163.09185 71.461271 z " />
+  </g>
+</svg>

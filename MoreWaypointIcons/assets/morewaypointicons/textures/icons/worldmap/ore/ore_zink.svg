@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="180mm"
+   viewBox="0 0 240 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ore_zink.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="16.970563"
+     inkscape:cy="332.34019"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="2744"
+       y="-392"
+       width="880"
+       height="4816"
+       id="rect6" />
+    <rect
+       x="101.82338"
+       y="91.923882"
+       width="384.66608"
+       height="299.81326"
+       id="rect3" />
+    <rect
+       x="2.8284271"
+       y="2.1213202"
+       width="662.55902"
+       height="647.00269"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="text1"
+       style="font-size:185.208px;line-height:0;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.264583"
+       d="M 28.797725 25.159188 L 28.797725 38.905119 L 98.069983 38.905119 L 22.738664 150.59029 L 22.738664 154.84068 L 119.59322 154.84068 L 119.59322 141.09475 L 45.437537 141.09475 L 121.40189 28.776538 L 121.40189 25.159188 L 28.797725 25.159188 z M 185.97108 60.066618 C 172.70748 60.066618 162.57938 65.914689 155.58585 77.610767 L 155.22412 77.610767 L 155.22412 62.237028 L 140.39298 62.237028 L 140.39298 154.84068 L 155.22412 154.84068 L 155.22412 102.02788 C 155.22412 93.527123 157.63569 86.503409 162.45882 80.956816 C 167.34223 75.349933 173.49123 72.546476 180.90679 72.546476 C 195.25558 72.546476 202.43002 82.373647 202.43002 102.02788 L 202.43002 154.84068 L 217.26116 154.84068 L 217.26116 98.229663 C 217.26116 85.870406 214.57828 76.435116 209.21255 69.923897 C 203.84683 63.35239 196.09964 60.066618 185.97108 60.066618 z " />
+  </g>
+</svg>
