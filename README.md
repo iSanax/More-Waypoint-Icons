@@ -393,17 +393,17 @@ Adds a wide variety of new waypoint icons for easier and more detailed map organ
 
 ---
 
+![](docs/image/flora_1.png)
+![](docs/image/flora_2.png)
+
+---
+
 ![](docs/image/ore.png)
 
 ---
 
 ![](docs/image/other_1.png)
 ![](docs/image/other_2.png)
-
----
-
-![](docs/image/flora_1.png)
-![](docs/image/flora_2.png)
 
 
 ## Category
