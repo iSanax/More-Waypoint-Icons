@@ -2,8 +2,6 @@
 	"game:wpSuggestion-conveyance_boat": "Boat",
 	"game:wpSuggestion-conveyance_raft": "Raft",
 
-
-
 	"game:wpSuggestion-food_berry_beautyberry": "Beautyberry",
 	"game:wpSuggestion-food_berry_black_rasp_berry": "Berry",
 	"game:wpSuggestion-food_berry_black_red_white_currant": "Currant",
@@ -27,8 +25,6 @@
 	"game:wpSuggestion-food_mushroom_edible_psychedelic": "Edible mushroom - Psychedelic",
 	"game:wpSuggestion-food_mushroom_poisonous_non_psychedelic": "Poisonous mushroom",
 	"game:wpSuggestion-food_mushroom_poisonous_psychedelic": "Poisonous mushroom - Psychedelic",
-
-
 
 	"game:wpSuggestion-ore_aluminum": "Aluminum",
 	"game:wpSuggestion-ore_bismuth": "Bismuth",
@@ -57,7 +53,18 @@
 	"game:wpSuggestion-ore_uranium": "Uranium",
 	"game:wpSuggestion-ore_zink": "Zinc",
 
-
+	"game:wpSuggestion-tool_axe": "Axe",
+	"game:wpSuggestion-tool_bow": "Bow",
+	"game:wpSuggestion-tool_knives": "Knives",
+	"game:wpSuggestion-tool_pickaxe": "Pickaxe",
+	"game:wpSuggestion-tool_pickaxe_prospecting": "Prospecting pick",
+	"game:wpSuggestion-tool_saw": "Saw",
+	"game:wpSuggestion-tool_scythes": "Scythes",
+	"game:wpSuggestion-tool_shears": "Shears",
+	"game:wpSuggestion-tool_shovel": "Shovel",
+	"game:wpSuggestion-tool_falx": "Falx",
+	"game:wpSuggestion-tool_spear": "Spear",
+	"game:wpSuggestion-tool_tasak": "Tasak",
 
 	"game:wpSuggestion-trader_agriculture": "Agriculture trader",
 	"game:wpSuggestion-trader_artisan": "Artisan trader",
@@ -68,8 +75,6 @@
 	"game:wpSuggestion-trader_luxuries": "Luxuries trader",
 	"game:wpSuggestion-trader_survivalGoods": "Survival Goods trader",
 	"game:wpSuggestion-trader_treasure": "Treasure trader",
-
-
 
 	"game:wpSuggestion-other_flora_flower": "Flower",
 	"game:wpSuggestion-other_high_fertility_soil": "High fertility soil",

@@ -1,5 +1,6 @@
 # [1.1.1] - 30-04-2026
     - Change of appearance for high-quality land
+    - Added icons for tools
 
 # [1.1.0] - 30-04-2026
     - Added translation for Polish
