@@ -1,7 +1,7 @@
 # [1.0.0] More Waypoint Icons
 
 <details>
-<summary>*Ustawienia generowania świata*</summary>
+<summary>Ustawienia generowania świata</summary>
 
 ```json
 {
