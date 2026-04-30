@@ -4,7 +4,7 @@
 	"name": "More Waypoint Icons",
 	"authors": [ "iSanax" ],
 	"description" : "Adds new icons for ores, traders, and mushrooms. This mod was created with Auto Map Markers in mind.",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"website": "https://github.com/iSanax/More-Waypoint-Icons",
 	"requiredOnServer": true,
 	"requiredOnClient":  true,
