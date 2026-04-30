@@ -2,23 +2,25 @@
 
 <details>
 <summary>*Ustawienia generowania świata*</summary>
+
 ```json
 ```
+
 </details>
 
 ## About
 Adds a wide variety of new waypoint icons for easier and more detailed map organization, including specialized markers for ores, traders, mushrooms, and other important points of interest. Designed to improve navigation and resource tracking, this mod works especially well alongside [Auto Map Markers](https://mods.vintagestory.at/automapmarkers) and [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc), expanding its functionality with clearer visual customization and better map readability for exploration, trading, and gathering.
 
 <p float="left">
-  <img src="docs/image/menu.png" width="48%" />
-  <img src="docs/image/icons.png" width="48%" />
+  <img src="docs/image/menu.png" width="33%" />
+  <img src="docs/image/icons.png" width="66%" />
 </p>
 
-![](docs/image/ore.png")
-![](docs/image/other_1.png")
-![](docs/image/other_2.png")
-![](docs/image/flora_1.png")
-![](docs/image/flora_2.png")
+![](docs/image/ore.png)
+![](docs/image/other_1.png)
+![](docs/image/other_2.png)
+![](docs/image/flora_1.png)
+![](docs/image/flora_2.png)
 
 ## Category
 Each icon has its own dedicated category, keeping waypoint icons properly organized and sorted instead of scattered throughout the menu, making navigation and selection much cleaner and more convenient.
