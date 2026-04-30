@@ -3,7 +3,7 @@
 <details>
 <summary>Ustawienia generowania świata</summary>
 
-![Auto Map Markers - Settings](VintagestoryData/ModConfig/AutoMapMarkers/settings.png)
+![Auto Map Markers - Settings](VintagestoryData/ModConfig/AutoMapMarkers/settings.json)
 ```json
 {
   "ConfigVersion": 5.0,
