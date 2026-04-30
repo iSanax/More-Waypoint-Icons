@@ -1,4 +1,4 @@
-# [1.1.0] More Waypoint Icons
+# [1.1.1] More Waypoint Icons
 
 <details>
 <summary>Ustawienia generowania świata</summary>
