@@ -1,5 +1,5 @@
-# [1.0.1] - 30-04-2026
-    - Added a file with suggested map marker names
+# [1.1.0] - 30-04-2026
+    - Added translation for Polish
 
 # [1.0.0] - 30-04-2026
     - Added icons for conveyance
