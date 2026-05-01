@@ -5,10 +5,7 @@ Adds a wide variety of new waypoint icons for easier and more detailed map organ
 
 Icons may look different than in the pictures without [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc) mod, as long as the mod is supported I decided not to add alternative functionality
 
-<p float="left">
-  <img src="docs/image/menu.png" width="33%" />
-  <img src="docs/image/icons.png" width="66%" />
-</p>
+![](docs/image/menu.png)
 
 ---
 
