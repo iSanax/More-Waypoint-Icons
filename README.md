@@ -5,6 +5,9 @@ Colors have been matched to the natural appearance of real-world objects, meanin
 
 The configuration file contains ![settings](VintagestoryData/ModConfig/AutoMapMarkers/settings.json) prepared for [Auto Map Markers](https://mods.vintagestory.at/automapmarkers), with no additional configuration required.
 
+To add the client configuration file, press Win+R and enter:
+"%appdata%\VintagestoryData\ModConfig\AutoMapMarkers", then replace the settings.json file.
+
 ## About
 Adds a wide variety of new waypoint icons for easier and more detailed map organization, including specialized markers for ores, traders, mushrooms, and other important points of interest. Designed to improve navigation and resource tracking, this mod works especially well alongside [Auto Map Markers](https://mods.vintagestory.at/automapmarkers) and [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc), expanding its functionality with clearer visual customization and better map readability for exploration, trading, and gathering. 
 
