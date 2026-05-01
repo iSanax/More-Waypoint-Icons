@@ -1,4 +1,4 @@
-# [1.2.0] More Waypoint Icons
+# [1.3.0] More Waypoint Icons
 
 <details>
 <summary>Ustawienia generowania świata</summary>
@@ -398,10 +398,14 @@ Icons may look different than in the pictures without [Alternative Map Icon Rend
 
 ![](docs/image/flora_1.png)
 ![](docs/image/flora_2.png)
+![](docs/image/flora_3.png)
+![](docs/image/flora_4.png)
+![](docs/image/flora_5.png)
 
 ---
 
-![](docs/image/ore.png)
+![](docs/image/ore_1.png)
+![](docs/image/ore_2.png)
 
 ---
 

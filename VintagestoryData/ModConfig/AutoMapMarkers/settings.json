@@ -13,56 +13,59 @@
   "DisableAllModFeatures": false,
   "MarkerOverrides": {
     "game:item-resin": {
+      "Enabled": true,
       "Icon": "other_resin",
       "Color": "#FF8C00"
     },
     "game:item-fruit-beautyberry": {
       "Enabled": true,
       "Icon": "food_berry_beautyberry",
-      "Color": "#FF00FF"
+      "Color": "#B744CB"
     },
     "game:item-fruit-blackberry": {
       "Enabled": true,
-      "Icon": "food_berry_black_rasp_berry"
+      "Icon": "food_berry_black_rasp_berry",
+      "Color": "#223649"
     },
     "game:item-fruit-blackcurrant": {
       "Enabled": true,
-      "Icon": "food_berry_black_red_white_currant"
+      "Icon": "food_berry_black_red_white_currant",
+      "Color": "#5F6063"
     },
     "game:item-fruit-blueberry": {
       "Enabled": true,
       "Icon": "food_berry_blueberry",
-      "Color": "#204EA2"
+      "Color": "#4F6E9F"
     },
     "game:item-fruit-cloudberry": {
       "Enabled": true,
       "Icon": "food_berry_cloudberry",
-      "Color": "#DAA520"
+      "Color": "#EA5E10"
     },
     "game:item-fruit-cranberry": {
       "Enabled": true,
       "Icon": "food_berry_cranberry",
-      "Color": "#800000"
+      "Color": "#CC2D31"
     },
     "game:item-fruit-raspberry": {
       "Enabled": true,
       "Icon": "food_berry_black_rasp_berry",
-      "Color": "#DC143C"
+      "Color": "#D72444"
     },
     "game:item-fruit-redcurrant": {
       "Enabled": true,
       "Icon": "food_berry_black_red_white_currant",
-      "Color": "#8B0000"
+      "Color": "#C61E18"
     },
     "game:item-fruit-strawberry": {
       "Enabled": true,
       "Icon": "food_berry_strawberry",
-      "Color": "#FF4500"
+      "Color": "#EF2D1A"
     },
     "game:item-fruit-whitecurrant": {
       "Enabled": true,
       "Icon": "food_berry_black_red_white_currant",
-      "Color": "#FFFFF0"
+      "Color": "#D4AB81"
     },
     "egocarib-mapmarkers:safe-mushrooms-nonpsychedelic": {
       "Enabled": true,
@@ -98,152 +101,249 @@
       "Color": "#FF00FF"
     },
     "egocarib-mapmarkers:fruit-trees": {
+      "Enabled": true,
       "Icon": "apple",
       "Color": "#9370DB"
     },
     "game:treegen-variant-fruittree-breadfruit": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_breadfruit",
-      "Color": "#6B8E23"
+      "Icon": "food_fruit_breadfruit",
+      "Color": "#E6E664"
     },
     "game:treegen-variant-fruittree-cherry": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_cherry",
-      "Color": "#DC143C"
+      "Icon": "food_fruit_cherry",
+      "Color": "#BF0B1D"
     },
     "game:treegen-variant-fruittree-lychee": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_lychee",
-      "Color": "#DB7093"
+      "Icon": "food_fruit_lychee",
+      "Color": "#FA5B58"
     },
     "game:treegen-variant-fruittree-mango": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_mango",
-      "Color": "#FF8C00"
+      "Icon": "food_fruit_mango",
+      "Color": "#E78327"
     },
     "game:treegen-variant-fruittree-olive": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_olive",
-      "Color": "#556B2F"
+      "Icon": "food_fruit_olive",
+      "Color": "#ABB53C"
     },
     "game:treegen-variant-fruittree-orange": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_orange",
-      "Color": "#FFA500"
+      "Icon": "food_fruit_orange",
+      "Color": "#EF6D26"
     },
     "game:treegen-variant-fruittree-peach": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_peach",
-      "Color": "#FFDAB9"
+      "Icon": "food_fruit_peach",
+      "Color": "#E54A52"
     },
     "game:treegen-variant-fruittree-pear": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_pear",
-      "Color": "#9ACD32"
+      "Icon": "food_fruit_pear",
+      "Color": "#C2CD51"
     },
     "game:treegen-variant-fruittree-pinkapple": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_apple",
-      "Color": "#FF69B4"
+      "Icon": "food_fruit_apple",
+      "Color": "#FE7BA3"
     },
     "game:treegen-variant-fruittree-pomegranate": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_pomegranate",
-      "Color": "#8B0000"
+      "Icon": "food_fruit_pomegranate",
+      "Color": "#FA3F33"
     },
     "game:treegen-variant-fruittree-redapple": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_apple",
-      "Color": "#FF0000"
+      "Icon": "food_fruit_apple",
+      "Color": "#9B0A12"
     },
     "game:treegen-variant-fruittree-yellowapple": {
       "Enabled": true,
-      "Icon": "food_fruit_tree_apple",
-      "Color": "#FFD700"
+      "Icon": "food_fruit_apple",
+      "Color": "#F2D73B"
     },
     "egocarib-mapmarkers:wild-crops": {
       "Enabled": true
     },
+    "egocarib-mapmarkers:crop-amaranth": {
+      "Enabled": true,
+      "Icon": "food_grain_amaranth",
+      "Color": "#B2084E"
+    },
+    "game:item-vegetable-cabbage": {
+      "Enabled": true,
+      "Icon": "food_vegetable_cabbage",
+      "Color": "#AACA40"
+    },
+    "game:item-vegetable-carrot": {
+      "Enabled": true,
+      "Icon": "food_vegetable_carrot",
+      "Color": "#FB7E0F"
+    },
+    "game:item-vegetable-cassava": {
+      "Enabled": true,
+      "Icon": "food_grain_cassava",
+      "Color": "#945D32"
+    },
+    "game:item-vegetable-fennel": {
+      "Enabled": true,
+      "Icon": "food_vegetable_fennel",
+      "Color": "#649039"
+    },
     "game:cropprop-type-flax": {
-      "Enabled": true
+      "Enabled": true,
+      "Icon": "food_grain_flax",
+      "Color": "#A9B0F4"
+    },
+    "game:block-crop-licorice-*": {
+      "Enabled": true,
+      "Icon": "food_vegetable_licorice",
+      "Color": "#B28864"
+    },
+    "game:item-vegetable-onion": {
+      "Enabled": true,
+      "Icon": "food_vegetable_onion",
+      "Color": "#FC912B"
+    },
+    "game:item-vegetable-parsnip": {
+      "Enabled": true,
+      "Icon": "food_vegetable_parsnip",
+      "Color": "#DCCCB0"
+    },
+    "game:item-legume-peanut": {
+      "Enabled": true,
+      "Icon": "food_vegetable_peanut",
+      "Color": "#CF8F3B"
+    },
+    "game:block-crop-pineapple-*": {
+      "Enabled": true,
+      "Icon": "food_fruit_pineapple",
+      "Color": "#F0BD2A"
+    },
+    "egocarib-mapmarkers:crop-rice": {
+      "Enabled": true,
+      "Icon": "food_grain_rice",
+      "Color": "#F0EBD7"
+    },
+    "game:cropprop-type-rye": {
+      "Enabled": true,
+      "Icon": "food_grain_rye",
+      "Color": "#BCA06D"
+    },
+    "game:item-legume-soybean": {
+      "Enabled": true,
+      "Icon": "food_vegetable_soybean",
+      "Color": "#EED390"
+    },
+    "game:cropprop-type-spelt": {
+      "Enabled": true,
+      "Icon": "food_grain_spelt",
+      "Color": "#E1AF7B"
+    },
+    "game:cropprop-type-sunflower": {
+      "Enabled": true,
+      "Icon": "food_grain_sunflower",
+      "Color": "#F7E11F"
+    },
+    "game:item-vegetable-turnip": {
+      "Enabled": true,
+      "Icon": "food_vegetable_turnip",
+      "Color": "#AF2D72"
     },
     "game:block-looseores-anthracite-*": {
-      "Color": "#706D64"
+      "Color": "#1C2A2B"
     },
     "game:block-looseores-bituminouscoal-*": {
-      "Color": "#000000"
+      "Color": "#7E7E7C"
     },
     "game:block-looseores-borax-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#BDC1C2"
     },
     "game:block-looseores-lignite-*": {
-      "Color": "#5D3D21"
+      "Color": "#483A30"
     },
     "game:block-looseores-cinnabar-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#E95143"
     },
     "game:block-looseores-lapislazuli-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#2D669F"
     },
     "game:block-looseores-galena-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#4A4E54"
     },
     "game:block-looseores-olivine-peridotite-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#83B839"
     },
     "game:block-looseores-quartz-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#E4E5E0"
     },
     "game:block-looseores-sulfur-*": {
-      "Enabled": true
+      "Enabled": true,
+      "Color": "#F1DE3E"
     },
     "game:block-ore-anthracite-*": {
+      "Enabled": true,
       "Icon": "ore_coal",
-      "Color": "#706D64"
+      "Color": "#1C2A2B"
     },
     "game:block-ore-*-bismuthinite-*": {
+      "Enabled": true,
       "Icon": "ore_bismuth",
-      "Color": "#2E8B57"
+      "Color": "#CE67A6"
     },
     "game:block-ore-bituminouscoal-*": {
+      "Enabled": true,
       "Icon": "ore_coal",
-      "Color": "#000000"
+      "Color": "#7E7E7C"
     },
     "game:block-ore-borax-*": {
       "Enabled": true,
       "Icon": "ore_borax",
-      "Color": "#F8F8FF"
+      "Color": "#BDC1C2"
     },
     "game:block-ore-lignite-*": {
+      "Enabled": true,
       "Icon": "ore_coal",
-      "Color": "#5D3D21"
+      "Color": "#483A30"
     },
     "game:block-ore-cinnabar-*": {
       "Enabled": true,
       "Icon": "ore_cinnabar",
-      "Color": "#DC143C"
+      "Color": "#E95143"
     },
     "egocarib-mapmarkers:copper-ore": {
+      "Enabled": true,
       "Icon": "ore_copper",
-      "Color": "#FF8C00"
+      "Color": "#B87333"
     },
     "egocarib-mapmarkers:gold-ore": {
+      "Enabled": true,
       "Icon": "ore_gold",
-      "Color": "#FFD700"
+      "Color": "#F0C10C"
     },
     "game:block-ore-*-limonite-*": {
+      "Enabled": true,
       "Icon": "ore_iron",
-      "Color": "#800000"
+      "Color": "#8B4513"
     },
     "game:block-ore-lapislazuli-*": {
       "Enabled": true,
       "Icon": "ore_silicon",
-      "Color": "#4169E1"
+      "Color": "#2D669F"
     },
     "game:block-ore-*-galena-*": {
       "Enabled": true,
       "Icon": "ore_lead",
-      "Color": "#708090"
+      "Color": "#4A4E54"
     },
     "game:block-ore-*-pentlandite-*": {
       "Enabled": true,
@@ -253,78 +353,82 @@
     "game:ore-olivine": {
       "Enabled": true,
       "Icon": "ore_silicon",
-      "Color": "#6B8E23"
+      "Color": "#83B839"
     },
     "game:ore-quartz": {
       "Enabled": true,
       "Icon": "ore_silicon",
-      "Color": "#FFFFFF"
+      "Color": "#E4E5E0"
     },
     "egocarib-mapmarkers:silver-ore": {
+      "Enabled": true,
       "Icon": "ore_silver",
-      "Color": "#C0C0C0"
+      "Color": "#C6C6C6"
     },
     "game:ore-sulfur": {
       "Enabled": true,
       "Icon": "ore_sulfur",
-      "Color": "#F0E68C"
+      "Color": "#F1DE3E"
     },
     "game:block-ore-*-cassiterite-*": {
-      "Icon": "ore_tin"
+      "Enabled": true,
+      "Icon": "ore_tin",
+      "Color": "#A5A9B4"
     },
     "game:block-ore-*-ilmenite-*": {
       "Enabled": true,
       "Icon": "ore_titanium",
-      "Color": "#2F4F4F"
+      "Color": "#8791A0"
     },
     "game:block-ore-*-sphalerite-*": {
+      "Enabled": true,
       "Icon": "ore_zink",
-      "Color": "#808080"
+      "Color": "#437999"
     },
     "egocarib-mapmarkers:trader-agriculture": {
       "Enabled": true,
       "Icon": "trader_agriculture",
-      "Color": "#03D941"
+      "Color": "#00BA2E"
     },
     "egocarib-mapmarkers:trader-artisan": {
       "Enabled": true,
       "Icon": "trader_artisan",
-      "Color": "#C8772E"
+      "Color": "#A03255"
     },
     "egocarib-mapmarkers:trader-buildmaterials": {
       "Enabled": true,
       "Icon": "trader_buildingmaterials",
-      "Color": "#ED272A"
+      "Color": "#96503C"
     },
     "egocarib-mapmarkers:trader-clothing": {
       "Enabled": true,
       "Icon": "trader_clothing",
-      "Color": "#F179AF"
+      "Color": "#FFFFFF"
     },
     "egocarib-mapmarkers:trader-commodities": {
       "Enabled": true,
       "Icon": "trader_commodities",
-      "Color": "#204EA2"
+      "Color": "#6B6B6B"
     },
     "egocarib-mapmarkers:trader-furniture": {
       "Enabled": true,
       "Icon": "trader_furniture",
-      "Color": "#FFFFFF"
+      "Color": "#FF7316"
     },
     "egocarib-mapmarkers:trader-luxuries": {
       "Enabled": true,
       "Icon": "trader_luxuries",
-      "Color": "#FFFF00"
+      "Color": "#00E1FF"
     },
     "egocarib-mapmarkers:trader-survivalgoods": {
       "Enabled": true,
       "Icon": "trader_survivalgoods",
-      "Color": "#03D7E3"
+      "Color": "#FF170F"
     },
     "egocarib-mapmarkers:trader-treasurehunter": {
       "Enabled": true,
       "Icon": "trader_treasure",
-      "Color": "#F47832"
+      "Color": "#FFC700"
     },
     "game:item-clay-red": {
       "Enabled": true
@@ -341,13 +445,14 @@
       "Color": "#D2691E"
     },
     "game:block-soil-compost-none": {
+      "Enabled": true,
       "Icon": "other_high_fertility_soil",
       "Color": "#4B0082"
     },
     "game:block-meteorite-iron": {
       "Enabled": true,
       "Icon": "ore_iron_meteoritic",
-      "Color": "#ED272A"
+      "Color": "#8B4513"
     },
     "game:block-saltpeter-d": {
       "Enabled": true,
@@ -355,21 +460,23 @@
       "Color": "#F5F5DC"
     },
     "egocarib-mapmarkers:raft-menu": {
+      "Enabled": true,
       "Icon": "conveyance_raft",
       "Color": "#FFD700"
     },
     "egocarib-mapmarkers:sailboat-menu": {
+      "Enabled": true,
       "Icon": "conveyance_boat",
       "Color": "#FFD700"
     }
   },
   "ExpandStates": {
-    "egocarib-mapmarkers:wild-crops": false,
+    "egocarib-mapmarkers:wild-crops": true,
     "egocarib-mapmarkers:traders": true,
     "egocarib-mapmarkers:berries": true,
     "egocarib-mapmarkers:safe-mushrooms": true,
     "egocarib-mapmarkers:unsafe-mushrooms": true,
-    "egocarib-mapmarkers:flowers": true,
+    "egocarib-mapmarkers:flowers": false,
     "egocarib-mapmarkers:fruit-trees": true
   }
 }
