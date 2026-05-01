@@ -1,7 +1,12 @@
 # [1.3.0] More Waypoint Icons
 
+## Settings
+Colors have been matched to the natural appearance of real-world objects, meaning each icon reflects the look of its corresponding element as accurately as possible. This approach ensures greater visual consistency and improves the intuitiveness of recognizing individual elements, as users can more easily associate icons with their real-life counterparts. The use of a natural color palette also contributes to a more aesthetic and readable overall appearance of the icon set.
+
+The configuration file contains ![settings](VintagestoryData/ModConfig/AutoMapMarkers/settings.json) prepared for [Auto Map Markers](https://mods.vintagestory.at/automapmarkers), with no additional configuration required.
+
 ## About
-Adds a wide variety of new waypoint icons for easier and more detailed map organization, including specialized markers for ores, traders, mushrooms, and other important points of interest. Designed to improve navigation and resource tracking, this mod works especially well alongside [Auto Map Markers](https://mods.vintagestory.at/automapmarkers) and [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc), expanding its functionality with clearer visual customization and better map readability for exploration, trading, and gathering. ![Settings](VintagestoryData/ModConfig/AutoMapMarkers/settings.json) for mod Auto Map Markers.
+Adds a wide variety of new waypoint icons for easier and more detailed map organization, including specialized markers for ores, traders, mushrooms, and other important points of interest. Designed to improve navigation and resource tracking, this mod works especially well alongside [Auto Map Markers](https://mods.vintagestory.at/automapmarkers) and [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc), expanding its functionality with clearer visual customization and better map readability for exploration, trading, and gathering. 
 
 Icons may look different than in the pictures without [Alternative Map Icon Renderer Continued](https://mods.vintagestory.at/amirc) mod, as long as the mod is supported I decided not to add alternative functionality
 
