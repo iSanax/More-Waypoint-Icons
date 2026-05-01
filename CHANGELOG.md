@@ -1,3 +1,6 @@
+# [1.3.1] - 2-05-2026
+    - Update logo
+    
 # [1.3.0] - 1-05-2026
     - Added icons for food: grains, vegetables
     - Added icon Magnesium

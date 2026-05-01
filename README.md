@@ -1,4 +1,4 @@
-# [1.3.0] More Waypoint Icons
+# [1.3.1] More Waypoint Icons
 
 ## Settings
 Colors have been matched to the natural appearance of real-world objects, meaning each icon reflects the look of its corresponding element as accurately as possible. This approach ensures greater visual consistency and improves the intuitiveness of recognizing individual elements, as users can more easily associate icons with their real-life counterparts. The use of a natural color palette also contributes to a more aesthetic and readable overall appearance of the icon set.
