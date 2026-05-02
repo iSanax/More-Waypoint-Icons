@@ -1,6 +1,9 @@
 # [1.5.0] - 3-05-2026
     - Update vanilla icons
     
+# [1.4.2] - 2-05-2026
+    - Fixed incorrect name for peat
+
 # [1.4.1] - 2-05-2026
     - Fixed icons: farmland and orchard
 
