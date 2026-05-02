@@ -1,3 +1,6 @@
+# [1.5.0] - 2-05-2026
+    - Update vanilla icons
+    
 # [1.4.0] - 2-05-2026
     - Added icons for places such as butcher blacksmith etc.
     - Removed tool icons
