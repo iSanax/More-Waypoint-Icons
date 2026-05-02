@@ -13,7 +13,6 @@
   "DisableAllModFeatures": false,
   "MarkerOverrides": {
     "game:item-resin": {
-      "Enabled": true,
       "Icon": "other_resin",
       "Color": "#FF8C00"
     },
@@ -101,7 +100,6 @@
       "Color": "#FF00FF"
     },
     "egocarib-mapmarkers:fruit-trees": {
-      "Enabled": true,
       "Icon": "apple",
       "Color": "#9370DB"
     },
@@ -291,17 +289,14 @@
       "Color": "#F1DE3E"
     },
     "game:block-ore-anthracite-*": {
-      "Enabled": true,
       "Icon": "ore_coal",
       "Color": "#1C2A2B"
     },
     "game:block-ore-*-bismuthinite-*": {
-      "Enabled": true,
       "Icon": "ore_bismuth",
       "Color": "#CE67A6"
     },
     "game:block-ore-bituminouscoal-*": {
-      "Enabled": true,
       "Icon": "ore_coal",
       "Color": "#7E7E7C"
     },
@@ -311,7 +306,6 @@
       "Color": "#BDC1C2"
     },
     "game:block-ore-lignite-*": {
-      "Enabled": true,
       "Icon": "ore_coal",
       "Color": "#483A30"
     },
@@ -321,23 +315,20 @@
       "Color": "#E95143"
     },
     "egocarib-mapmarkers:copper-ore": {
-      "Enabled": true,
       "Icon": "ore_copper",
       "Color": "#B87333"
     },
     "egocarib-mapmarkers:gold-ore": {
-      "Enabled": true,
       "Icon": "ore_gold",
       "Color": "#F0C10C"
     },
     "game:block-ore-*-limonite-*": {
-      "Enabled": true,
       "Icon": "ore_iron",
       "Color": "#8B4513"
     },
     "game:block-ore-lapislazuli-*": {
       "Enabled": true,
-      "Icon": "ore_silicon",
+      "Icon": "ore_aluminum",
       "Color": "#2D669F"
     },
     "game:block-ore-*-galena-*": {
@@ -352,7 +343,7 @@
     },
     "game:ore-olivine": {
       "Enabled": true,
-      "Icon": "ore_silicon",
+      "Icon": "ore_magnesium",
       "Color": "#83B839"
     },
     "game:ore-quartz": {
@@ -361,7 +352,6 @@
       "Color": "#E4E5E0"
     },
     "egocarib-mapmarkers:silver-ore": {
-      "Enabled": true,
       "Icon": "ore_silver",
       "Color": "#C6C6C6"
     },
@@ -371,7 +361,6 @@
       "Color": "#F1DE3E"
     },
     "game:block-ore-*-cassiterite-*": {
-      "Enabled": true,
       "Icon": "ore_tin",
       "Color": "#A5A9B4"
     },
@@ -381,7 +370,6 @@
       "Color": "#8791A0"
     },
     "game:block-ore-*-sphalerite-*": {
-      "Enabled": true,
       "Icon": "ore_zink",
       "Color": "#437999"
     },
@@ -441,11 +429,10 @@
     },
     "game:block-peat-none": {
       "Enabled": true,
-      "Icon": "other_torf",
+      "Icon": "other_peat",
       "Color": "#D2691E"
     },
     "game:block-soil-compost-none": {
-      "Enabled": true,
       "Icon": "other_high_fertility_soil",
       "Color": "#4B0082"
     },
@@ -460,12 +447,10 @@
       "Color": "#F5F5DC"
     },
     "egocarib-mapmarkers:raft-menu": {
-      "Enabled": true,
       "Icon": "conveyance_raft",
       "Color": "#FFD700"
     },
     "egocarib-mapmarkers:sailboat-menu": {
-      "Enabled": true,
       "Icon": "conveyance_boat",
       "Color": "#FFD700"
     }
