@@ -1,3 +1,6 @@
+# [1.4.1] - 2-05-2026
+    - Fixed icons: farmland and orchard
+
 # [1.4.0] - 2-05-2026
     - Added icons for places such as butcher blacksmith etc.
     - Removed tool icons
