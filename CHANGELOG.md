@@ -1,9 +1,10 @@
 # [1.5.0] - 3-05-2026
     - Update vanilla icons
-    - Added icons for places harbor, lighthouse
-    - Added icons for miscellaneous: crystal, rappid, anchor
-    - Added icon mount moose
+    - Added icons for places: harbor, lighthouse, campfire, rappid
+    - Added icons for miscellaneous: anchor, chest, coral_reef, crystal, powder
+    - Added icon for conveyance: cart, moose
     - Added icon for flora: reeds, tule, corn
+    - Added icon for marks: exclamation mark, question mark
 
 # [1.4.2] - 2-05-2026
     - Fixed incorrect name for peat
