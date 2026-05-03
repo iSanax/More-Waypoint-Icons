@@ -107,6 +107,7 @@
 
 	"game:wpSuggestion-campfire": "Ognisko",
 	"game:wpSuggestion-harbor": "Port",
+	"game:wpSuggestion-library": "Biblioteka",
 	"game:wpSuggestion-lighthouse": "Latarnia morska",
 	"game:wpSuggestion-place_apiary": "Pasieka",
 	"game:wpSuggestion-place_bakery": "Piekarnia",
@@ -141,6 +142,7 @@
 	"game:wpSuggestion-trader_treasure": "Handlarz skarbami",
 
 	"game:wpSuggestion-anchor": "Kotwica",
+	"game:wpSuggestion-book": "Książka",
 	"game:wpSuggestion-chest": "Skrzynia",
 	"game:wpSuggestion-coral_reef": "Rafa koralowa",
 	"game:wpSuggestion-crystal": "Kryształ",

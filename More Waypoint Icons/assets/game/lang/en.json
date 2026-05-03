@@ -107,6 +107,7 @@
 
 	"game:wpSuggestion-campfire": "Campfire",
 	"game:wpSuggestion-harbor": "Harbor",
+	"game:wpSuggestion-library": "Library",
 	"game:wpSuggestion-lighthouse": "Lighthouse",
 	"game:wpSuggestion-place_apiary": "Apiary",
 	"game:wpSuggestion-place_bakery": "Bakery",
@@ -141,6 +142,7 @@
 	"game:wpSuggestion-trader_treasure": "Treasure trader",
 
 	"game:wpSuggestion-anchor": "Anchor",
+	"game:wpSuggestion-book": "Book",
 	"game:wpSuggestion-chest": "Chest",
 	"game:wpSuggestion-coral_reef": "Coral reef",
 	"game:wpSuggestion-crystal": "Crystal",
