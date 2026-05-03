@@ -16,6 +16,10 @@
       "Icon": "other_resin",
       "Color": "#FF8C00"
     },
+    "egocarib-mapmarkers:berries": {
+      "Icon": "food_berry_strawberry",
+      "Color": "#ED272A"
+    },
     "game:item-fruit-beautyberry": {
       "Enabled": true,
       "Icon": "food_berry_beautyberry",
@@ -66,6 +70,10 @@
       "Icon": "food_berry_black_red_white_currant",
       "Color": "#D4AB81"
     },
+    "egocarib-mapmarkers:safe-mushrooms": {
+      "Icon": "food_mushroom_edible_non_psychedelic",
+      "Color": "#228B22"
+    },
     "egocarib-mapmarkers:safe-mushrooms-nonpsychedelic": {
       "Enabled": true,
       "Icon": "food_mushroom_edible_non_psychedelic",
@@ -77,7 +85,9 @@
       "Color": "#F179AF"
     },
     "egocarib-mapmarkers:unsafe-mushrooms": {
-      "Enabled": true
+      "Enabled": true,
+      "Icon": "food_mushroom_poisonous_non_psychedelic",
+      "Color": "#DC143C"
     },
     "egocarib-mapmarkers:unsafe-mushrooms-nonpsychedelic": {
       "Enabled": true,
@@ -91,17 +101,117 @@
     },
     "egocarib-mapmarkers:flowers": {
       "Enabled": true,
-      "Icon": "other_flower",
-      "Color": "#F179AF"
+      "Icon": "wild_daisy",
+      "Color": "#EFFD5F"
+    },
+    "game:block-flower-bluebell-*": {
+      "Enabled": true,
+      "Icon": "bluebell",
+      "Color": "#5749BF"
+    },
+    "game:block-flower-catmint-*": {
+      "Enabled": true,
+      "Icon": "catmint",
+      "Color": "#A488C0"
+    },
+    "game:block-flower-cornflower-*": {
+      "Enabled": true,
+      "Icon": "cornflower",
+      "Color": "#7B7FDD"
+    },
+    "game:block-flower-cowparsley-*": {
+      "Enabled": true,
+      "Icon": "cow_parsley",
+      "Color": "#ECECF0"
+    },
+    "egocarib-mapmarkers:flower-croton": {
+      "Enabled": true,
+      "Icon": "croton",
+      "Color": "#F0593E"
+    },
+    "game:block-flower-daffodil-*": {
+      "Enabled": true,
+      "Icon": "daffodil",
+      "Color": "#D6CA27"
+    },
+    "game:block-flower-edelweiss-*": {
+      "Enabled": true,
+      "Icon": "edelweiss",
+      "Color": "#EEECF9"
+    },
+    "game:block-flower-forgetmenot-*": {
+      "Enabled": true,
+      "Icon": "forget_me_not",
+      "Color": "#6CB5F4"
+    },
+    "game:block-flower-ghostpipe*": {
+      "Enabled": true,
+      "Icon": "ghost_pipe",
+      "Color": "#FAFBFF"
+    },
+    "game:block-flower-goldenpoppy-*": {
+      "Enabled": true,
+      "Icon": "golden_poppy",
+      "Color": "#FB9F0C"
+    },
+    "game:block-flower-heather-*": {
+      "Enabled": true,
+      "Icon": "heather",
+      "Color": "#D93F87"
     },
     "game:block-flower-horsetail-*": {
       "Enabled": true,
-      "Icon": "other_flower",
-      "Color": "#FF00FF"
+      "Icon": "horsetail",
+      "Color": "#73B660"
+    },
+    "game:block-flower-lilyofthevalley-*": {
+      "Enabled": true,
+      "Icon": "lily_of_the_valley",
+      "Color": "#E9EBF6"
+    },
+    "egocarib-mapmarkers:flower-lupine": {
+      "Enabled": true,
+      "Icon": "lupine",
+      "Color": "#436F00"
+    },
+    "game:block-flower-mugwort-*": {
+      "Enabled": true,
+      "Icon": "mugwort",
+      "Color": "#8FA360"
+    },
+    "game:block-flower-orangemallow-*": {
+      "Enabled": true,
+      "Icon": "orange_mallow",
+      "Color": "#FC910B"
+    },
+    "egocarib-mapmarkers:flower-rafflesia": {
+      "Enabled": true,
+      "Icon": "rafflesia",
+      "Color": "#DE583C"
+    },
+    "game:block-flower-redtopgrass-*": {
+      "Enabled": true,
+      "Icon": "redtop_grass",
+      "Color": "#AD966B"
+    },
+    "game:block-flower-westerngorse-*": {
+      "Enabled": true,
+      "Icon": "dwarf_furze",
+      "Color": "#DFC50C"
+    },
+    "game:block-flower-wilddaisy-*": {
+      "Enabled": true,
+      "Icon": "wild_daisy",
+      "Color": "#EAEBE4"
+    },
+    "game:block-flower-woad-*": {
+      "Enabled": true,
+      "Icon": "woad",
+      "Color": "#EDD508"
     },
     "egocarib-mapmarkers:fruit-trees": {
-      "Icon": "apple",
-      "Color": "#9370DB"
+      "Icon": "food_fruit_cherry",
+      "Color": "#A30A35"
     },
     "game:treegen-variant-fruittree-breadfruit": {
       "Enabled": true,
@@ -164,7 +274,9 @@
       "Color": "#F2D73B"
     },
     "egocarib-mapmarkers:wild-crops": {
-      "Enabled": true
+      "Enabled": true,
+      "Icon": "food_grain_spelt",
+      "Color": "#DAA520"
     },
     "egocarib-mapmarkers:crop-amaranth": {
       "Enabled": true,
@@ -383,6 +495,10 @@
       "Icon": "ore_zink",
       "Color": "#437999"
     },
+    "egocarib-mapmarkers:traders": {
+      "Icon": "caravan",
+      "Color": "#FFFF00"
+    },
     "egocarib-mapmarkers:trader-agriculture": {
       "Enabled": true,
       "Icon": "trader_agriculture",
@@ -471,7 +587,7 @@
     "egocarib-mapmarkers:berries": true,
     "egocarib-mapmarkers:safe-mushrooms": true,
     "egocarib-mapmarkers:unsafe-mushrooms": true,
-    "egocarib-mapmarkers:flowers": false,
+    "egocarib-mapmarkers:flowers": true,
     "egocarib-mapmarkers:fruit-trees": true
   }
 }
