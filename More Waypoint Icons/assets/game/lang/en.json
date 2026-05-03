@@ -52,6 +52,9 @@
 	"game:wpSuggestion-reeds": "Reeds",
 	"game:wpSuggestion-tule": "Tule",
 
+	"game:wpSuggestion-exclamation_mark": "!",
+	"game:wpSuggestion-question_mark": "?",
+
 	"game:wpSuggestion-ore_aluminum": "Aluminum",
 	"game:wpSuggestion-ore_bismuth": "Bismuth",
 	"game:wpSuggestion-ore_borax": "Borax",

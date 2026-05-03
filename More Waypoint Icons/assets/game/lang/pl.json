@@ -51,6 +51,9 @@
 
 	"game:wpSuggestion-reeds": "Pałka wodna",
 	"game:wpSuggestion-tule": "Oczeret",
+	
+	"game:wpSuggestion-exclamation_mark": "!",
+	"game:wpSuggestion-question_mark": "?",
 
 	"game:wpSuggestion-ore_aluminum": "Aluminium",
 	"game:wpSuggestion-ore_bismuth": "Bizmut",
