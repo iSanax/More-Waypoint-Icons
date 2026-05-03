@@ -1,6 +1,8 @@
 {
+	"game:wpSuggestion-caravan": "Caravan",
 	"game:wpSuggestion-conveyance_boat": "Boat",
 	"game:wpSuggestion-conveyance_raft": "Raft",
+	"game:wpSuggestion-mount_moose": "Mount moose",
 
 	"game:wpSuggestion-food_berry_beautyberry": "Beautyberry",
 	"game:wpSuggestion-food_berry_black_rasp_berry": "Berry",
@@ -24,6 +26,7 @@
 
 	"game:wpSuggestion-food_grain_amaranth": "Amaranth",
 	"game:wpSuggestion-food_grain_cassava": "Cassava",
+	"game:wpSuggestion-corn": "Corn",
 	"game:wpSuggestion-food_grain_flax": "Flax",
 	"game:wpSuggestion-food_grain_rice": "Rice",
 	"game:wpSuggestion-food_grain_rye": "Rye",
@@ -45,6 +48,9 @@
 	"game:wpSuggestion-food_vegetable_pumpkin": "Pumpkin",
 	"game:wpSuggestion-food_vegetable_soybean": "Soybean",
 	"game:wpSuggestion-food_vegetable_turnip": "Turnip",
+
+	"game:wpSuggestion-reeds": "Reeds",
+	"game:wpSuggestion-tule": "Tule",
 
 	"game:wpSuggestion-ore_aluminum": "Aluminum",
 	"game:wpSuggestion-ore_bismuth": "Bismuth",
@@ -74,6 +80,9 @@
 	"game:wpSuggestion-ore_uranium": "Uranium",
 	"game:wpSuggestion-ore_zink": "Zinc",
 
+	"game:wpSuggestion-campfire": "Campfire",
+	"game:wpSuggestion-harbor": "Harbor",
+	"game:wpSuggestion-lighthouse": "Lighthouse",
 	"game:wpSuggestion-place_apiary": "Apiary",
 	"game:wpSuggestion-place_bakery": "Bakery",
 	"game:wpSuggestion-place_blacksmith": "Blacksmith",
@@ -94,6 +103,7 @@
 	"game:wpSuggestion-place_warehouses": "Warehouse",
 	"game:wpSuggestion-place_watermill": "Watermill",
 	"game:wpSuggestion-place_windmill": "Windmill",
+	"game:wpSuggestion-rapid": "Rapid",
 
 	"game:wpSuggestion-trader_agriculture": "Agriculture trader",
 	"game:wpSuggestion-trader_artisan": "Artisan trader",
@@ -104,6 +114,12 @@
 	"game:wpSuggestion-trader_luxuries": "Luxuries trader",
 	"game:wpSuggestion-trader_survivalGoods": "Survival Goods trader",
 	"game:wpSuggestion-trader_treasure": "Treasure trader",
+
+	"game:wpSuggestion-anchor": "Anchor",
+	"game:wpSuggestion-chest": "Chest",
+	"game:wpSuggestion-coral_reef": "Coral reef",
+	"game:wpSuggestion-crystal": "Crystal",
+	"game:wpSuggestion-powder": "Powder",
 
 	"game:wpSuggestion-other_flora_flower": "Flower",
 	"game:wpSuggestion-other_high_fertility_soil": "High fertility soil",

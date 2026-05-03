@@ -1,6 +1,8 @@
 {
+	"game:wpSuggestion-caravan": "Caravan",
 	"game:wpSuggestion-conveyance_boat": "Łódź",
 	"game:wpSuggestion-conveyance_raft": "Tratwa",
+	"game:wpSuggestion-mount_moose": "Wierzchowiec łoś",
 
 	"game:wpSuggestion-food_berry_beautyberry": "Pięknotka",
 	"game:wpSuggestion-food_berry_black_rasp_berry": "Jeżyna",
@@ -24,6 +26,7 @@
 
 	"game:wpSuggestion-food_grain_amaranth": "Amarantus",
 	"game:wpSuggestion-food_grain_cassava": "Maniok",
+	"game:wpSuggestion-corn": "Kukurydza",
 	"game:wpSuggestion-food_grain_flax": "Len",
 	"game:wpSuggestion-food_grain_rice": "Ryż",
 	"game:wpSuggestion-food_grain_rye": "Żyto",
@@ -45,6 +48,9 @@
 	"game:wpSuggestion-food_vegetable_pumpkin": "Dynia",
 	"game:wpSuggestion-food_vegetable_soybean": "Soja",
 	"game:wpSuggestion-food_vegetable_turnip": "Rzepa",
+
+	"game:wpSuggestion-reeds": "Pałka wodna",
+	"game:wpSuggestion-tule": "Oczeret",
 
 	"game:wpSuggestion-ore_aluminum": "Aluminium",
 	"game:wpSuggestion-ore_bismuth": "Bizmut",
@@ -74,6 +80,9 @@
 	"game:wpSuggestion-ore_uranium": "Uran",
 	"game:wpSuggestion-ore_zink": "Cynk",
 
+	"game:wpSuggestion-campfire": "Ognisko",
+	"game:wpSuggestion-harbor": "Port",
+	"game:wpSuggestion-lighthouse": "Latarnia morska",
 	"game:wpSuggestion-place_apiary": "Pasieka",
 	"game:wpSuggestion-place_bakery": "Piekarnia",
 	"game:wpSuggestion-place_blacksmith": "Kuźnia",
@@ -94,6 +103,7 @@
 	"game:wpSuggestion-place_warehouses": "Magazyn",
 	"game:wpSuggestion-place_watermill": "Młyn wodny",
 	"game:wpSuggestion-place_windmill": "Wiatrak",
+	"game:wpSuggestion-rapid": "Strumień",
 
 	"game:wpSuggestion-trader_agriculture": "Handlarz rolniczy",
 	"game:wpSuggestion-trader_artisan": "Handlarz rzemiosła",
@@ -104,6 +114,12 @@
 	"game:wpSuggestion-trader_luxuries": "Handlarz luksusami",
 	"game:wpSuggestion-trader_survivalGoods": "Handlarz towarami przetrwania",
 	"game:wpSuggestion-trader_treasure": "Handlarz skarbami",
+
+	"game:wpSuggestion-anchor": "Kotwica",
+	"game:wpSuggestion-chest": "Skrzynia",
+	"game:wpSuggestion-coral_reef": "Rafa koralowa",
+	"game:wpSuggestion-crystal": "Kryształ",
+	"game:wpSuggestion-powder": "Proch",
 
 	"game:wpSuggestion-other_flora_flower": "Kwiat",
 	"game:wpSuggestion-other_high_fertility_soil": "Gleba wysokiej żyzności",
