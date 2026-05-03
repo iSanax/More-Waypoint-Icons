@@ -92,7 +92,7 @@
     "egocarib-mapmarkers:flowers": {
       "Enabled": true,
       "Icon": "other_flower",
-      "Color": "#FF00FF"
+      "Color": "#F179AF"
     },
     "game:block-flower-horsetail-*": {
       "Enabled": true,
@@ -250,6 +250,16 @@
       "Enabled": true,
       "Icon": "food_vegetable_turnip",
       "Color": "#AF2D72"
+    },
+    "egocarib-mapmarkers:reeds": {
+      "Enabled": true,
+      "Icon": "reeds",
+      "Color": "#AC6D46"
+    },
+    "egocarib-mapmarkers:tule": {
+      "Enabled": true,
+      "Icon": "tule",
+      "Color": "#7C9E36"
     },
     "game:block-looseores-anthracite-*": {
       "Color": "#1C2A2B"
