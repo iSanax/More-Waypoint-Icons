@@ -25,6 +25,8 @@ Icons may look different than in the pictures without [Alternative Map Icon Rend
 ![](docs/image/flora_3.png)
 ![](docs/image/flora_4.png)
 ![](docs/image/flora_5.png)
+![](docs/image/flora_6.png)
+![](docs/image/flora_7.png)
 
 ---
 
