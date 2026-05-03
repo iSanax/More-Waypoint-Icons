@@ -1,6 +1,10 @@
 # [1.5.0] - 3-05-2026
     - Update vanilla icons
-    
+    - Added icons for places harbor, lighthouse
+    - Added icons for miscellaneous: crystal, rappid, anchor
+    - Added icon mount moose
+    - Added icon for flora: reeds, tule, corn
+
 # [1.4.2] - 2-05-2026
     - Fixed incorrect name for peat
 
