@@ -1,5 +1,6 @@
 # [1.6.0] - 3-05-2026
     - Added 21 flower icons
+    - Added icons: libraries and book
     - Fixed lang pl for 'caravana'
 
 # [1.5.0] - 3-05-2026
