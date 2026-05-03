@@ -1,3 +1,7 @@
+# [1.6.0] - 4-05-2026
+    - Added icons for flowers
+    - Fixed lang pl for 'caravana'
+
 # [1.5.0] - 3-05-2026
     - Update vanilla icons
     - Added icons for places: harbor, lighthouse, campfire, rappid
