@@ -1,5 +1,5 @@
-# [1.6.0] - 4-05-2026
-    - Added icons for flowers
+# [1.6.0] - 3-05-2026
+    - Added 21 flower icons
     - Fixed lang pl for 'caravana'
 
 # [1.5.0] - 3-05-2026
