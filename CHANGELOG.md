@@ -1,3 +1,10 @@
+# [1.7.0] - 5-05-2026
+    - Added 22 animals icons
+    - Added mount-horse icon
+    - Fixed lang-en for: place_butcher, trader_buildingMaterials, trader_survivalGoods"
+    - Fixed lang-pl for: caravana, place_hunter, trader_survivalGoods, powder
+    - Fix wrong filename ore_zink to ore_zinc
+
 # [1.6.0] - 3-05-2026
     - Added 21 flower icons
     - Added icons: libraries and book
