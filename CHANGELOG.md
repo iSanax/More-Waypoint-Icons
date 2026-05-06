@@ -1,3 +1,7 @@
+# [1.8.0] - 6-05-2026
+    - Change of fashion type from content to code
+    - Added .dll to expand the UI for adding/editing waypoints
+
 # [1.7.0] - 5-05-2026
     - Added 22 animals icons
     - Added mount-horse icon

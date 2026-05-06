@@ -1,10 +1,10 @@
 {
-	"type": "content",
+	"type": "code",
 	"modid": "mwi",
 	"name": "More Waypoint Icons",
 	"authors": [ "iSanax" ],
 	"description" : "Adds 100+ waypoint icons: food, ores, traders, craft buildings, conveyors, and more.",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"website": "https://github.com/iSanax/More-Waypoint-Icons",
 	"requiredOnServer": true,
 	"requiredOnClient":  true,
