@@ -12,6 +12,7 @@
             --text-dim: #94a3b8;
             --accent: #38bdf8;
             --missing: #ef4444;
+            --success: #22c55e;
         }
 
         body { 
@@ -41,7 +42,7 @@
 
         h1 { margin: 0 0 10px 0; font-size: 1.5rem; color: var(--accent); }
 
-        .stats { font-size: 0.85rem; color: var(--text-dim); }
+        .stats { font-size: 0.85rem; color: var(--text-dim); display: flex; gap: 20px; }
 
         table { width: 100%; border-collapse: collapse; }
         
@@ -49,16 +50,19 @@
             background: rgba(0,0,0,0.2); 
             text-align: left; 
             padding: 15px; 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 0.05em;
-            color: var(--text-dim);
             border-bottom: 2px solid var(--border);
         }
 
+        .th-content { display: flex; flex-direction: column; gap: 5px; }
+        .lang-name { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); }
+        .lang-perc { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
+        
+        /* Pasek postępu pod nagłówkiem */
+        .progress-bar { width: 100%; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+
         td { padding: 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 
-        /* Styl pierwszej kolumny */
         .icon-info { display: flex; align-items: center; gap: 15px; }
         
         .icon-preview {
@@ -80,17 +84,9 @@
         }
 
         .name-wrapper { display: flex; flex-direction: column; gap: 2px; }
-        
         .file-name { font-weight: 600; font-size: 0.95rem; color: var(--text-main); }
-        
-        .translation-key { 
-            font-family: 'JetBrains Mono', 'Consolas', monospace; 
-            font-size: 0.75rem; 
-            color: var(--accent);
-            opacity: 0.8;
-        }
+        .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); opacity: 0.8; }
 
-        /* Tłumaczenia */
         .translation-cell { font-size: 0.9rem; }
         .missing { color: var(--missing); font-size: 0.8rem; font-weight: bold; }
 
@@ -108,8 +104,7 @@
     <table id="mainTable" style="display:none;">
         <thead>
             <tr id="headerRow">
-                <th>Ikona i Klucz</th>
-                <!-- Języki wpadną tutaj -->
+                <th><div class="th-content"><span class="lang-name">Ikona i Klucz</span></div></th>
             </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -125,25 +120,55 @@
         try {
             const mRes = await fetch('manifest.json');
             const manifest = await mRes.json();
+            const iconCount = manifest.icons.length;
 
+            const sortedLangs = ['en', ...manifest.langs.filter(l => l !== 'en')];
             const langData = {};
-            for (const lang of manifest.langs) {
+            const langStats = {};
+
+            // 1. Pobierz dane i oblicz statystyki
+            for (const lang of sortedLangs) {
                 try {
-                    // Ścieżka do Twoich plików lang
                     const lRes = await fetch(`../More Waypoint Icons/assets/game/lang/${lang}.json`);
-                    if (lRes.ok) langData[lang] = await lRes.json();
-                    
-                    const th = document.createElement('th');
-                    th.innerText = lang;
-                    headerRow.appendChild(th);
-                } catch (e) { console.error(e); }
+                    if (lRes.ok) {
+                        langData[lang] = await lRes.json();
+                        
+                        // Liczenie wypełnionych kluczy
+                        let translatedCount = 0;
+                        manifest.icons.forEach(icon => {
+                            const key = `game:wpSuggestion-${icon}`;
+                            if (langData[lang][key]) translatedCount++;
+                        });
+
+                        const percentage = ((translatedCount / iconCount) * 100).toFixed(1);
+                        langStats[lang] = { count: translatedCount, percent: percentage };
+                    }
+                } catch (e) { 
+                    console.error(`Błąd wczytywania ${lang}:`, e);
+                    langStats[lang] = { count: 0, percent: 0 };
+                }
             }
 
+            // 2. Dodaj nagłówki z procentami
+            sortedLangs.forEach(lang => {
+                const s = langStats[lang];
+                const th = document.createElement('th');
+                th.innerHTML = `
+                    <div class="th-content">
+                        <span class="lang-name">${lang}</span>
+                        <span class="lang-perc">${s.percent}%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${s.percent}%"></div>
+                        </div>
+                    </div>
+                `;
+                headerRow.appendChild(th);
+            });
+
+            // 3. Renderuj wiersze
             manifest.icons.forEach(iconName => {
                 const tr = document.createElement('tr');
                 const translationKey = `game:wpSuggestion-${iconName}`;
-                
-                // Ścieżka do podglądu Twoich plików SVG
                 const iconPath = `../More Waypoint Icons/assets/mwi/textures/icons/worldmap/${iconName}.svg`;
 
                 let rowHtml = `
@@ -160,7 +185,7 @@
                     </td>
                 `;
 
-                manifest.langs.forEach(lang => {
+                sortedLangs.forEach(lang => {
                     const val = (langData[lang] && langData[lang][translationKey]) 
                                 ? langData[lang][translationKey] 
                                 : '<span class="missing">❌ BRAK</span>';
@@ -171,7 +196,7 @@
                 tbody.appendChild(tr);
             });
 
-            stats.innerHTML = `Ikony: <b>${manifest.iconCount}</b> | Języki: <b>${manifest.langs.join(', ')}</b>`;
+            stats.innerHTML = `<span>Ikony: <b>${iconCount}</b></span> <span>Języki: <b>${sortedLangs.length}</b></span>`;
             document.getElementById('mainTable').style.display = 'table';
 
         } catch (err) {
