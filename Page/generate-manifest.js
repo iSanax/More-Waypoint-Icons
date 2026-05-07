@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const PATHS = {
-    icons: path.join(__dirname, './More Waypoint Icons/assets/mwi/textures/icons/worldmap'),
-    langs: path.join(__dirname, './More Waypoint Icons/assets/game/lang'),
-    output: path.join(__dirname, './Page/manifest.json')
+    icons: path.join(__dirname, '../More Waypoint Icons/assets/mwi/textures/icons/worldmap'),
+    langs: path.join(__dirname, '../More Waypoint Icons/assets/game/lang'),
+    output: path.join(__dirname, './manifest.json')
 };
 
 function generate() {
@@ -22,7 +22,6 @@ function generate() {
         const manifest = {
             generatedAt: new Date().toLocaleString(),
             iconCount: icons.length,
-            sprawdzam: "CZY TO DZIALA",
             langs: langs,
             icons: icons
         };
