@@ -1,5 +1,6 @@
 # [1.9.0] - 7-05-2026
     - Added 15 trees icons
+    - Added icons: duck, sheep, swan
 
 # [1.8.0] - 6-05-2026
     - Change of fashion type from content to code
