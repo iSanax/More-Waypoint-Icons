@@ -5,49 +5,52 @@
     <title>Icon Translation Manager</title>
     <style>
         :root {
-            --bg: #0f172a;
-            --panel: #1e293b;
-            --border: #334155;
-            --text-main: #f1f5f9;
-            --text-dim: #94a3b8;
-            --accent: #38bdf8;
-            --missing: #ef4444;
-            --input-bg: #0f172a;
+            --bg: #121214;
+            --panel: #1e1e21;
+            --border: #333338;
+            --text-main: #ffffff;   /* Czysta biel dla głównych napisów */
+            --text-dim: #cbd5e1;    /* Jasny szary dla mniej ważnych tekstów */
+            --accent: #ffffff;      /* Akcenty również białe */
+            --missing: #f87171;
+            --input-bg: #161618;
+            --hover-row: #2a2a2e;
         }
 
         body { 
-            font-family: 'Inter', system-ui, sans-serif; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
             background: var(--bg); 
             color: var(--text-main); 
             padding: 40px 20px;
             margin: 0;
+            line-height: 1.5;
         }
 
         .container { 
-            width: 95vw; /* Zmiana z max-width na szerokość zależną od ekranu */
+            width: 95vw; 
             margin: 0 auto; 
             background: var(--panel); 
             border-radius: 12px; 
             border: 1px solid var(--border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
             display: flex;
             flex-direction: column;
-            max-height: 90vh; /* Zapobiega uciekaniu tabeli poza dół ekranu */
+            max-height: 90vh;
         }
 
         .header-section {
-            padding: 25px;
-            background: rgba(255,255,255,0.02);
+            padding: 20px 25px;
+            background: rgba(255,255,255,0.03);
             border-bottom: 1px solid var(--border);
             flex-shrink: 0;
         }
 
-        h1 { margin: 0 0 10px 0; font-size: 1.5rem; color: var(--accent); }
+        h1 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 700; color: var(--text-main); }
         .stats { font-size: 0.85rem; color: var(--text-dim); display: flex; gap: 20px; }
+        .stats b { color: var(--text-main); }
 
         .search-bar-area {
-            padding: 20px 25px;
-            background: rgba(0,0,0,0.1);
+            padding: 15px 25px;
+            background: rgba(0,0,0,0.2);
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
@@ -65,95 +68,94 @@
             padding: 10px 14px;
             background: var(--input-bg);
             border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--text-main);
+            border-radius: 8px;
+            color: #ffffff;
             font-size: 0.85rem;
             outline: none;
         }
 
+        #searchInput::placeholder { color: #666; }
+
         #filterStatus { width: 220px; cursor: pointer; }
 
-        /* KONTENER NA TABELĘ Z SUWAKIEM */
         .table-wrapper {
-            overflow: auto; /* Włącza suwaki jeśli tabela jest za szeroka lub za długa */
+            overflow: auto;
             background: var(--panel);
         }
 
         table { 
             width: 100%; 
             border-collapse: collapse; 
-            min-width: 1000px; /* Minimalna szerokość, by kolumny nie były zbyt ciasne */
+            min-width: 1000px; 
         }
         
         th { 
-            background: #1e293b; 
+            background: #242428; 
             text-align: left; 
-            padding: 15px; 
+            padding: 14px 18px; 
             border-bottom: 2px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 10;
         }
 
-        .th-content { display: flex; flex-direction: column; gap: 5px; min-width: 120px; }
-        .lang-name { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); }
-        .lang-perc { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
+        .th-content { display: flex; flex-direction: column; gap: 6px; min-width: 130px; }
+        .lang-name { font-size: 0.75rem; font-weight: 800; color: var(--text-main); letter-spacing: 0.05em; text-transform: uppercase; }
+        .lang-perc { font-size: 0.85rem; color: var(--text-main); font-weight: 600; }
         
-        .progress-bar { width: 100%; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
-        .progress-fill { height: 100%; background: var(--accent); }
+        .progress-bar { width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden; }
+        .progress-fill { height: 100%; background: #ffffff; }
 
-        td { padding: 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        td { padding: 12px 18px; border-bottom: 1px solid var(--border); vertical-align: middle; color: #ffffff; }
 
-        .icon-info { display: flex; align-items: center; gap: 15px; min-width: 300px; }
+        .icon-info { display: flex; align-items: center; gap: 15px; min-width: 320px; }
         
         .icon-preview {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: #000;
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 4px;
+            border-radius: 8px;
+            padding: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
 
-        .icon-preview img { max-width: 100%; max-height: 100%; }
-
         .name-wrapper { display: flex; flex-direction: column; gap: 2px; }
-        .file-name { font-weight: 600; font-size: 0.95rem; color: var(--text-main); }
-        .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); opacity: 0.8; }
+        .file-name { font-weight: 600; font-size: 0.95rem; color: #ffffff; }
+        .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #94a3b8; }
 
         .translation-cell { font-size: 0.9rem; white-space: nowrap; }
-        .missing { color: var(--missing); font-size: 0.8rem; font-weight: bold; }
+        .missing { color: var(--missing); font-size: 0.75rem; font-weight: 700; }
 
-        tr:hover { background: rgba(255,255,255,0.03); }
+        tr:hover { background: var(--hover-row); }
         tr.hidden { display: none; }
 
-        /* Stylizacja suwaka */
-        .table-wrapper::-webkit-scrollbar { width: 8px; height: 8px; }
+        /* Scrollbar */
+        .table-wrapper::-webkit-scrollbar { width: 10px; height: 10px; }
         .table-wrapper::-webkit-scrollbar-track { background: var(--bg); }
-        .table-wrapper::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-        .table-wrapper::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        .table-wrapper::-webkit-scrollbar-thumb { background: #444; border-radius: 5px; }
+        .table-wrapper::-webkit-scrollbar-thumb:hover { background: #666; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header-section">
-        <h1>🚩 Waypoint Icons Explorer</h1>
-        <div id="stats" class="stats">Wczytywanie...</div>
+        <h1>Waypoint Icons Explorer</h1>
+        <div id="stats" class="stats">Loading data...</div>
     </div>
 
     <div class="search-bar-area">
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Filtruj ikony...">
+            <input type="text" id="searchInput" placeholder="Search icons or keys...">
         </div>
         <div class="filter-container">
             <select id="filterStatus">
-                <option value="all">Pokaż wszystkie</option>
-                <option value="missing">Tylko nieuzupełnione</option>
+                <option value="all">Show All Icons</option>
+                <option value="missing">Show Only Missing</option>
             </select>
         </div>
     </div>
@@ -162,7 +164,7 @@
         <table id="mainTable" style="display:none;">
             <thead>
                 <tr id="headerRow">
-                    <th style="width: 350px;"><div class="th-content"><span class="lang-name">Ikona i Klucz</span></div></th>
+                    <th style="width: 380px;"><div class="th-content"><span class="lang-name">Icon Resource</span></div></th>
                 </tr>
             </thead>
             <tbody id="tableBody"></tbody>
@@ -229,7 +231,7 @@
                     <td class="icon-column">
                         <div class="icon-info">
                             <div class="icon-preview">
-                                <img src="${iconPath}" alt="" onerror="this.parentElement.style.display='none'">
+                                <img src="${iconPath}" alt="" width="32" height="32" onerror="this.parentElement.style.display='none'">
                             </div>
                             <div class="name-wrapper">
                                 <span class="file-name">${iconName}</span>
@@ -244,7 +246,7 @@
                     const isMissing = !(langData[lang] && langData[lang][translationKey]);
                     if (isMissing) rowHasMissing = true;
 
-                    const val = isMissing ? '❌ BRAK' : langData[lang][translationKey];
+                    const val = isMissing ? '⚠️ MISSING' : langData[lang][translationKey];
                     rowHtml += `<td class="translation-cell ${isMissing ? 'missing' : ''}">${val}</td>`;
                 });
 
@@ -253,7 +255,7 @@
                 tbody.appendChild(tr);
             });
 
-            stats.innerHTML = `<span>Ikony: <b>${iconCount}</b></span> <span>Języki: <b>${sortedLangs.length}</b></span>`;
+            stats.innerHTML = `<span>Icons: <b>${iconCount}</b></span> <span>Languages: <b>${sortedLangs.length}</b></span>`;
             document.getElementById('mainTable').style.display = 'table';
 
             const applyFilters = () => {
@@ -274,7 +276,7 @@
             filterStatus.addEventListener('change', applyFilters);
 
         } catch (err) {
-            stats.innerHTML = `<span style="color:red">Błąd: ${err.message}</span>`;
+            stats.innerHTML = `<span style="color:var(--missing)">Error: ${err.message}</span>`;
         }
     }
     init();
