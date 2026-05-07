@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Ikon - More Waypoint Icons</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        .controls { margin-bottom: 20px; }
+        input { padding: 10px; width: 300px; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #333; color: white; position: sticky; top: 0; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        tr:hover { background: #f1f1f1; }
+        img { width: 32px; height: 32px; image-rendering: pixelated; }
+        .key-cell { font-family: monospace; color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h2>Podgląd Ikon i Tłumaczeń</h2>
+    
+    <div class="controls">
+        <input type="text" id="search" placeholder="Szukaj ikony lub tłumaczenia...">
+    </div>
+
+    <table id="mainTable">
+        <thead>
+            <tr id="headerRow">
+                <th>Ikona</th>
+                <th>Klucz (ID)</th>
+                <!-- Tutaj skrypt wstawi kolumny języków -->
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Tutaj skrypt wstawi wiersze -->
+        </tbody>
+    </table>
+
+    <script>
+        const tableBody = document.getElementById('tableBody');
+        const headerRow = document.getElementById('headerRow');
+        const searchInput = document.getElementById('search');
+
+        let allData = []; // Tu będą połączone dane
+
+        async function init() {
+            try {
+                // 1. Pobierz manifest plików
+                const manifestRes = await fetch('./files-manifest.json');
+                const manifest = await manifestRes.json();
+
+                // 2. Pobierz wszystkie pliki językowe
+                const langData = {};
+                for (const langFile of manifest.langs) {
+                    const r = await fetch(`./assets/game/lang/${langFile}`);
+                    const json = await r.json();
+                    const langName = langFile.replace('.json', '').toUpperCase();
+                    langData[langName] = json;
+
+                    // Dodaj nagłówek do tabeli
+                    const th = document.createElement('th');
+                    th.textContent = langName;
+                    headerRow.appendChild(th);
+                }
+
+                // 3. Połącz ikony z tłumaczeniami
+                allData = manifest.icons.map(iconFile => {
+                    const key = iconFile.replace('.png', ''); // np. "home"
+                    const row = { iconFile, key, translations: {} };
+                    
+                    for (const [langName, json] of Object.entries(langData)) {
+                        row.translations[langName] = json[key] || "---";
+                    }
+                    return row;
+                });
+
+                renderTable();
+            } catch (e) {
+                console.error("Błąd ładowania:", e);
+                tableBody.innerHTML = "<tr><td colspan='3'>Błąd ładowania danych. Upewnij się, że używasz Live Server.</td></tr>";
+            }
+        }
+
+        function renderTable(filter = "") {
+            tableBody.innerHTML = "";
+            const query = filter.toLowerCase();
+
+            const filtered = allData.filter(row => {
+                const inKey = row.key.toLowerCase().includes(query);
+                const inTrans = Object.values(row.translations).some(t => t.toLowerCase().includes(query));
+                return inKey || inTrans;
+            });
+
+            filtered.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                // Ścieżka do ikony - dopasuj jeśli Twoja jest inna!
+                const iconPath = `./assets/mwi/textures/icons/worldmap/${row.iconFile}`;
+                
+                let html = `
+                    <td><img src="${iconPath}" alt="${row.key}"></td>
+                    <td class="key-cell">${row.key}</td>
+                `;
+
+                // Dodaj kolumny z tłumaczeniami
+                Object.values(row.translations).forEach(text => {
+                    html += `<td>${text}</td>`;
+                });
+
+                tr.innerHTML = html;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => renderTable(e.target.value));
+
+        init();
+    </script>
+</body>
+</html>
