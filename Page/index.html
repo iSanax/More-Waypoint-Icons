@@ -2,120 +2,185 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Lista Ikon - More Waypoint Icons</title>
+    <title>Icon Translation Manager</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
-        .controls { margin-bottom: 20px; }
-        input { padding: 10px; width: 300px; font-size: 16px; }
-        table { width: 100%; border-collapse: collapse; background: white; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background: #333; color: white; position: sticky; top: 0; }
-        tr:nth-child(even) { background: #f9f9f9; }
-        tr:hover { background: #f1f1f1; }
-        img { width: 32px; height: 32px; image-rendering: pixelated; }
-        .key-cell { font-family: monospace; color: #666; font-size: 0.9em; }
+        :root {
+            --bg: #0f172a;
+            --panel: #1e293b;
+            --border: #334155;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --missing: #ef4444;
+        }
+
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            background: var(--bg); 
+            color: var(--text-main); 
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: var(--panel); 
+            padding: 0; 
+            border-radius: 12px; 
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .header-section {
+            padding: 25px;
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 { margin: 0 0 10px 0; font-size: 1.5rem; color: var(--accent); }
+
+        .stats { font-size: 0.85rem; color: var(--text-dim); }
+
+        table { width: 100%; border-collapse: collapse; }
+        
+        th { 
+            background: rgba(0,0,0,0.2); 
+            text-align: left; 
+            padding: 15px; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            border-bottom: 2px solid var(--border);
+        }
+
+        td { padding: 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+
+        /* Styl pierwszej kolumny */
+        .icon-info { display: flex; align-items: center; gap: 15px; }
+        
+        .icon-preview {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+        }
+
+        .name-wrapper { display: flex; flex-direction: column; gap: 2px; }
+        
+        .file-name { font-weight: 600; font-size: 0.95rem; color: var(--text-main); }
+        
+        .translation-key { 
+            font-family: 'JetBrains Mono', 'Consolas', monospace; 
+            font-size: 0.75rem; 
+            color: var(--accent);
+            opacity: 0.8;
+        }
+
+        /* Tłumaczenia */
+        .translation-cell { font-size: 0.9rem; }
+        .missing { color: var(--missing); font-size: 0.8rem; font-weight: bold; }
+
+        tr:hover { background: rgba(255,255,255,0.03); }
     </style>
 </head>
 <body>
 
-    <h2>Podgląd Ikon i Tłumaczeń</h2>
-    
-    <div class="controls">
-        <input type="text" id="search" placeholder="Szukaj ikony lub tłumaczenia...">
+<div class="container">
+    <div class="header-section">
+        <h1>🚩 Waypoint Icons Explorer</h1>
+        <div id="stats" class="stats">Wczytywanie...</div>
     </div>
 
-    <table id="mainTable">
+    <table id="mainTable" style="display:none;">
         <thead>
             <tr id="headerRow">
-                <th>Ikona</th>
-                <th>Klucz (ID)</th>
-                <!-- Tutaj skrypt wstawi kolumny języków -->
+                <th>Ikona i Klucz</th>
+                <!-- Języki wpadną tutaj -->
             </tr>
         </thead>
-        <tbody id="tableBody">
-            <!-- Tutaj skrypt wstawi wiersze -->
-        </tbody>
+        <tbody id="tableBody"></tbody>
     </table>
+</div>
 
-    <script>
-        const tableBody = document.getElementById('tableBody');
+<script>
+    async function init() {
+        const stats = document.getElementById('stats');
+        const tbody = document.getElementById('tableBody');
         const headerRow = document.getElementById('headerRow');
-        const searchInput = document.getElementById('search');
 
-        let allData = []; // Tu będą połączone dane
+        try {
+            const mRes = await fetch('manifest.json');
+            const manifest = await mRes.json();
 
-        async function init() {
-            try {
-                // 1. Pobierz manifest plików
-                const manifestRes = await fetch('./files-manifest.json');
-                const manifest = await manifestRes.json();
-
-                // 2. Pobierz wszystkie pliki językowe
-                const langData = {};
-                for (const langFile of manifest.langs) {
-                    const r = await fetch(`./assets/game/lang/${langFile}`);
-                    const json = await r.json();
-                    const langName = langFile.replace('.json', '').toUpperCase();
-                    langData[langName] = json;
-
-                    // Dodaj nagłówek do tabeli
-                    const th = document.createElement('th');
-                    th.textContent = langName;
-                    headerRow.appendChild(th);
-                }
-
-                // 3. Połącz ikony z tłumaczeniami
-                allData = manifest.icons.map(iconFile => {
-                    const key = iconFile.replace('.png', ''); // np. "home"
-                    const row = { iconFile, key, translations: {} };
+            const langData = {};
+            for (const lang of manifest.langs) {
+                try {
+                    // Ścieżka do Twoich plików lang
+                    const lRes = await fetch(`../More Waypoint Icons/assets/game/lang/${lang}.json`);
+                    if (lRes.ok) langData[lang] = await lRes.json();
                     
-                    for (const [langName, json] of Object.entries(langData)) {
-                        row.translations[langName] = json[key] || "---";
-                    }
-                    return row;
-                });
-
-                renderTable();
-            } catch (e) {
-                console.error("Błąd ładowania:", e);
-                tableBody.innerHTML = "<tr><td colspan='3'>Błąd ładowania danych. Upewnij się, że używasz Live Server.</td></tr>";
+                    const th = document.createElement('th');
+                    th.innerText = lang;
+                    headerRow.appendChild(th);
+                } catch (e) { console.error(e); }
             }
-        }
 
-        function renderTable(filter = "") {
-            tableBody.innerHTML = "";
-            const query = filter.toLowerCase();
-
-            const filtered = allData.filter(row => {
-                const inKey = row.key.toLowerCase().includes(query);
-                const inTrans = Object.values(row.translations).some(t => t.toLowerCase().includes(query));
-                return inKey || inTrans;
-            });
-
-            filtered.forEach(row => {
+            manifest.icons.forEach(iconName => {
                 const tr = document.createElement('tr');
+                const translationKey = `game:wpSuggestion-${iconName}`;
                 
-                // Ścieżka do ikony - dopasuj jeśli Twoja jest inna!
-                const iconPath = `./assets/mwi/textures/icons/worldmap/${row.iconFile}`;
-                
-                let html = `
-                    <td><img src="${iconPath}" alt="${row.key}"></td>
-                    <td class="key-cell">${row.key}</td>
+                // Ścieżka do podglądu Twoich plików SVG
+                const iconPath = `../More Waypoint Icons/assets/mwi/textures/icons/worldmap/${iconName}.svg`;
+
+                let rowHtml = `
+                    <td>
+                        <div class="icon-info">
+                            <div class="icon-preview">
+                                <img src="${iconPath}" alt="" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="name-wrapper">
+                                <span class="file-name">${iconName}</span>
+                                <span class="translation-key">${translationKey}</span>
+                            </div>
+                        </div>
+                    </td>
                 `;
 
-                // Dodaj kolumny z tłumaczeniami
-                Object.values(row.translations).forEach(text => {
-                    html += `<td>${text}</td>`;
+                manifest.langs.forEach(lang => {
+                    const val = (langData[lang] && langData[lang][translationKey]) 
+                                ? langData[lang][translationKey] 
+                                : '<span class="missing">❌ BRAK</span>';
+                    rowHtml += `<td class="translation-cell">${val}</td>`;
                 });
 
-                tr.innerHTML = html;
-                tableBody.appendChild(tr);
+                tr.innerHTML = rowHtml;
+                tbody.appendChild(tr);
             });
+
+            stats.innerHTML = `Ikony: <b>${manifest.iconCount}</b> | Języki: <b>${manifest.langs.join(', ')}</b>`;
+            document.getElementById('mainTable').style.display = 'table';
+
+        } catch (err) {
+            stats.innerHTML = `<span style="color:red">Błąd: ${err.message}</span>`;
         }
+    }
 
-        searchInput.addEventListener('input', (e) => renderTable(e.target.value));
+    init();
+</script>
 
-        init();
-    </script>
 </body>
 </html>
