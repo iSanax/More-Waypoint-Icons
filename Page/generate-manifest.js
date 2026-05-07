@@ -7,16 +7,36 @@ const PATHS = {
     output: path.join(__dirname, './manifest.json')
 };
 
+function getAllFiles(dirPath, extension, arrayOfFiles) {
+    const files = fs.readdirSync(dirPath);
+    arrayOfFiles = arrayOfFiles || [];
+
+    files.forEach(function(file) {
+        const fullPath = path.join(dirPath, file);
+        if (fs.statSync(fullPath).isDirectory()) {
+            arrayOfFiles = getAllFiles(fullPath, extension, arrayOfFiles);
+        } else {
+            if (file.endsWith(extension)) {
+                // path.basename(file, extension) usuwa rozszerzenie z nazwy pliku
+                const fileNameWithoutExt = path.basename(file, extension);
+                arrayOfFiles.push(fileNameWithoutExt);
+            }
+        }
+    });
+
+    return arrayOfFiles;
+}
+
 function generate() {
     try {
-        console.log('🔍 Szukam plików...');
+        console.log('🔍 Szukanie ikon ...');
 
         const icons = fs.existsSync(PATHS.icons) 
-            ? fs.readdirSync(PATHS.icons).filter(f => f.endsWith('.svg'))
+            ? getAllFiles(PATHS.icons, '.svg')
             : [];
 
         const langs = fs.existsSync(PATHS.langs)
-            ? fs.readdirSync(PATHS.langs).filter(f => f.endsWith('.json'))
+            ? getAllFiles(PATHS.langs, '.json')
             : [];
 
         const manifest = {
@@ -26,11 +46,14 @@ function generate() {
             icons: icons
         };
 
-        fs.writeFileSync(PATHS.output, JSON.stringify(manifest, null, 2));
-        console.log(`✅ Sukces! Znaleziono ${icons.length} ikon i ${langs.length} plików językowych.`);
+        fs.writeFileSync(PATHS.output, JSON.stringify(manifest, null, 2), 'utf8');
+        
+        console.log(`✅ Sukces!`);
+        console.log(`- Ikon: ${icons.length}`);
+        console.log(`- Języków: ${langs.length}`);
         
     } catch (err) {
-        console.error('❌ Błąd skryptu:', err.message);
+        console.error('❌ Błąd:', err.message);
         process.exit(1);
     }
 }
