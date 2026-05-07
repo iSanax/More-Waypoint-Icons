@@ -8,9 +8,9 @@
             --bg: #121214;
             --panel: #1e1e21;
             --border: #333338;
-            --text-main: #ffffff;   /* Czysta biel dla głównych napisów */
-            --text-dim: #cbd5e1;    /* Jasny szary dla mniej ważnych tekstów */
-            --accent: #ffffff;      /* Akcenty również białe */
+            --text-main: #ffffff;   
+            --text-dim: #cbd5e1;    
+            --accent: #00ffff;      
             --missing: #f87171;
             --input-bg: #161618;
             --hover-row: #2a2a2e;
@@ -23,6 +23,7 @@
             padding: 40px 20px;
             margin: 0;
             line-height: 1.5;
+            font-weight: 400;
         }
 
         .container { 
@@ -31,7 +32,6 @@
             background: var(--panel); 
             border-radius: 12px; 
             border: 1px solid var(--border);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
             display: flex;
             flex-direction: column;
             max-height: 90vh;
@@ -44,9 +44,9 @@
             flex-shrink: 0;
         }
 
-        h1 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 700; color: var(--text-main); }
+        h1 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 400; color: var(--accent); }
         .stats { font-size: 0.85rem; color: var(--text-dim); display: flex; gap: 20px; }
-        .stats b { color: var(--text-main); }
+        .stats b { color: var(--accent); font-weight: 400; }
 
         .search-bar-area {
             padding: 15px 25px;
@@ -55,15 +55,12 @@
             display: flex;
             align-items: center;
             flex-shrink: 0;
+            gap: 60px; /* Zwiększony odstęp między wyszukiwarką a checkboxem */
         }
 
-        .search-container { 
-            width: 350px; 
-            flex-shrink: 0;
-            margin-right: 30px; 
-        }
+        .search-container { width: 350px; }
 
-        #searchInput, #filterStatus {
+        #searchInput {
             width: 100%;
             padding: 10px 14px;
             background: var(--input-bg);
@@ -72,11 +69,41 @@
             color: #ffffff;
             font-size: 0.85rem;
             outline: none;
+            font-weight: 400;
         }
 
-        #searchInput::placeholder { color: #666; }
+        .filter-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            user-select: none;
+            color: var(--text-main);
+        }
 
-        #filterStatus { width: 220px; cursor: pointer; }
+        #filterStatus {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin: 0;
+        }
+
+        #filterStatus:checked {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        #filterStatus:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
+        }
 
         .table-wrapper {
             overflow: auto;
@@ -93,20 +120,23 @@
             background: #242428; 
             text-align: left; 
             padding: 14px 18px; 
-            border-bottom: 2px solid var(--border);
+            border-bottom: 2px solid var(--accent);
             position: sticky;
             top: 0;
             z-index: 10;
+            font-weight: 400;
         }
 
         .th-content { display: flex; flex-direction: column; gap: 6px; min-width: 130px; }
-        .lang-name { font-size: 0.75rem; font-weight: 800; color: var(--text-main); letter-spacing: 0.05em; text-transform: uppercase; }
-        .lang-perc { font-size: 0.85rem; color: var(--text-main); font-weight: 600; }
+        .lang-name { font-size: 0.75rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
+        .lang-perc { font-size: 0.85rem; color: var(--accent); }
         
         .progress-bar { width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden; }
-        .progress-fill { height: 100%; background: #ffffff; }
+        .progress-fill { height: 100%; background: var(--accent); }
 
         td { padding: 12px 18px; border-bottom: 1px solid var(--border); vertical-align: middle; color: #ffffff; }
+
+        .icon-column { color: var(--accent); }
 
         .icon-info { display: flex; align-items: center; gap: 15px; min-width: 320px; }
         
@@ -114,7 +144,7 @@
             width: 44px;
             height: 44px;
             background: #000;
-            border: 1px solid var(--border);
+            border: 1px solid var(--accent);
             border-radius: 8px;
             padding: 6px;
             display: flex;
@@ -124,20 +154,18 @@
         }
 
         .name-wrapper { display: flex; flex-direction: column; gap: 2px; }
-        .file-name { font-weight: 600; font-size: 0.95rem; color: #ffffff; }
-        .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #94a3b8; }
+        .file-name { font-size: 0.95rem; color: var(--accent); }
+        .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #00cccc; }
 
         .translation-cell { font-size: 0.9rem; white-space: nowrap; }
-        .missing { color: var(--missing); font-size: 0.75rem; font-weight: 700; }
+        .missing { color: var(--missing); font-size: 0.75rem; }
 
         tr:hover { background: var(--hover-row); }
         tr.hidden { display: none; }
 
-        /* Scrollbar */
         .table-wrapper::-webkit-scrollbar { width: 10px; height: 10px; }
         .table-wrapper::-webkit-scrollbar-track { background: var(--bg); }
-        .table-wrapper::-webkit-scrollbar-thumb { background: #444; border-radius: 5px; }
-        .table-wrapper::-webkit-scrollbar-thumb:hover { background: #666; }
+        .table-wrapper::-webkit-scrollbar-thumb { background: #008b8b; border-radius: 5px; }
     </style>
 </head>
 <body>
@@ -152,12 +180,10 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search icons or keys...">
         </div>
-        <div class="filter-container">
-            <select id="filterStatus">
-                <option value="all">Show All Icons</option>
-                <option value="missing">Show Only Missing</option>
-            </select>
-        </div>
+        <label class="filter-container">
+            Show Only Missing
+            <input type="checkbox" id="filterStatus">
+        </label>
     </div>
 
     <div class="table-wrapper">
@@ -246,7 +272,7 @@
                     const isMissing = !(langData[lang] && langData[lang][translationKey]);
                     if (isMissing) rowHasMissing = true;
 
-                    const val = isMissing ? '⚠️ MISSING' : langData[lang][translationKey];
+                    const val = isMissing ? 'MISSING' : langData[lang][translationKey];
                     rowHtml += `<td class="translation-cell ${isMissing ? 'missing' : ''}">${val}</td>`;
                 });
 
@@ -260,7 +286,7 @@
 
             const applyFilters = () => {
                 const term = searchInput.value.toLowerCase();
-                const onlyMissing = filterStatus.value === 'missing';
+                const onlyMissing = filterStatus.checked;
                 const rows = tbody.getElementsByTagName('tr');
 
                 for (const row of rows) {
