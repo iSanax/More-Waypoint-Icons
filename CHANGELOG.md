@@ -1,3 +1,6 @@
+# [1.9.0] - 7-05-2026
+    - Added 15 trees icons
+
 # [1.8.0] - 6-05-2026
     - Change of fashion type from content to code
     - Added .dll to expand the UI for adding/editing waypoints

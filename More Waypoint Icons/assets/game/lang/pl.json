@@ -175,5 +175,21 @@
 	"game:wpSuggestion-other_flora_flower": "Kwiat",
 	"game:wpSuggestion-other_high_fertility_soil": "Gleba wysokiej żyzności",
 	"game:wpSuggestion-other_resin": "Żywica",
-	"game:wpSuggestion-other_peat": "Torf"
+	"game:wpSuggestion-other_peat": "Torf",
+
+	"game:wpSuggestion-acacia": "Akacja",
+	"game:wpSuggestion-aged_tree": "Stare drzewo",
+	"game:wpSuggestion-bald_cypress": "Cypryśnik błotny",
+	"game:wpSuggestion-bamboo": "Bambus",
+	"game:wpSuggestion-birch": "Brzoza",
+	"game:wpSuggestion-ebony": "Heban",
+	"game:wpSuggestion-kapok": "Kapokowiec",
+	"game:wpSuggestion-larch": "Modrzew",
+	"game:wpSuggestion-maple": "Klon",
+	"game:wpSuggestion-oak": "Dąb",
+	"game:wpSuggestion-palm": "Palma",
+	"game:wpSuggestion-pine": "Sosna",
+	"game:wpSuggestion-purpleheart": "Amarant",
+	"game:wpSuggestion-redwood": "Sekwoja",
+	"game:wpSuggestion-walnut": "Orzech włoski"
 }	

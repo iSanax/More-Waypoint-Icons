@@ -175,5 +175,21 @@
 	"game:wpSuggestion-other_flora_flower": "Flower",
 	"game:wpSuggestion-other_high_fertility_soil": "High fertility soil",
 	"game:wpSuggestion-other_resin": "Resin",
-	"game:wpSuggestion-other_peat": "Peat"
+	"game:wpSuggestion-other_peat": "Peat",
+
+	"game:wpSuggestion-acacia": "Acacia",
+	"game:wpSuggestion-aged_tree": "Aged tree",
+	"game:wpSuggestion-bald_cypress": "Bald cypress",
+	"game:wpSuggestion-bamboo": "Bamboo",
+	"game:wpSuggestion-birch": "Birch",
+	"game:wpSuggestion-ebony": "Ebony",
+	"game:wpSuggestion-kapok": "Kapok",
+	"game:wpSuggestion-larch": "Larch",
+	"game:wpSuggestion-maple": "Maple",
+	"game:wpSuggestion-oak": "Oak",
+	"game:wpSuggestion-palm": "Palm",
+	"game:wpSuggestion-pine": "Pine",
+	"game:wpSuggestion-purpleheart": "Purpleheart",
+	"game:wpSuggestion-redwood": "Redwood",
+	"game:wpSuggestion-walnut": "Walnut"
 }
