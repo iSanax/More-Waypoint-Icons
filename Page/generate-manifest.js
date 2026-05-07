@@ -21,8 +21,9 @@ function generate() {
 
         const manifest = {
             generatedAt: new Date().toLocaleString(),
-            icons: icons,
-            langs: langs
+            iconCount: icons.length,
+            langs: langs,
+            icons: icons
         };
 
         fs.writeFileSync(PATHS.output, JSON.stringify(manifest, null, 2));
