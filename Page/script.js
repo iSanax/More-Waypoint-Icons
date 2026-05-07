@@ -1,61 +1,109 @@
-const fs = require('fs');
-const path = require('path');
+async function init() {
+    const stats = document.getElementById('stats');
+    const tbody = document.getElementById('tableBody');
+    const headerRow = document.getElementById('headerRow');
+    const searchInput = document.getElementById('searchInput');
+    const filterStatus = document.getElementById('filterStatus');
 
-// Ścieżki - dostosuj jeśli foldery są inaczej ułożone
-const PATHS = {
-    manifest: path.join(__dirname, './manifest.json'),
-    langsDir: path.join(__dirname, '../More Waypoint Icons/assets/game/lang'),
-    output: path.join(__dirname, './icons-table.md') // Tabela w formacie Markdown
-};
-
-function generateTable() {
     try {
-        // 1. Wczytaj manifest
-        const manifest = JSON.parse(fs.readFileSync(PATHS.manifest, 'utf8'));
-        const { icons, langs } = manifest;
+        const mRes = await fetch('manifest.json');
+        const manifest = await mRes.json();
+        const iconCount = manifest.icons.length;
 
-        // 2. Wczytaj zawartość wszystkich plików językowych
-        const langMaps = {};
-        langs.forEach(lang => {
-            const langPath = path.join(PATHS.langsDir, `${lang}.json`);
-            if (fs.existsSync(langPath)) {
-                langMaps[lang] = JSON.parse(fs.readFileSync(langPath, 'utf8'));
-            } else {
-                langMaps[lang] = {};
-                console.warn(`⚠️ Brak pliku dla języka: ${lang}`);
+        const sortedLangs = ['en', ...manifest.langs.filter(l => l !== 'en')];
+        const langData = {};
+        const langStats = {};
+
+        for (const lang of sortedLangs) {
+            try {
+                const lRes = await fetch(`../More Waypoint Icons/assets/game/lang/${lang}.json`);
+                if (lRes.ok) {
+                    langData[lang] = await lRes.json();
+                    let translatedCount = 0;
+                    manifest.icons.forEach(icon => {
+                        const key = `game:wpSuggestion-${icon}`;
+                        if (langData[lang][key]) translatedCount++;
+                    });
+                    const percentage = ((translatedCount / iconCount) * 100).toFixed(1);
+                    langStats[lang] = { count: translatedCount, percent: percentage };
+                }
+            } catch (e) {
+                langStats[lang] = { count: 0, percent: 0 };
             }
+        }
+
+        sortedLangs.forEach(lang => {
+            const s = langStats[lang] || { percent: 0 };
+            const th = document.createElement('th');
+            th.innerHTML = `
+                <div class="th-content">
+                    <span class="lang-name">${lang}</span>
+                    <span class="lang-perc">${s.percent}%</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${s.percent}%"></div>
+                    </div>
+                </div>
+            `;
+            headerRow.appendChild(th);
         });
 
-        // 3. Budowanie nagłówka tabeli
-        // Kolumny: Ikona | Klucz | Język 1 | Język 2 ...
-        let header = `| Ikona | Klucz (Translation Key) | ${langs.join(' | ')} |\n`;
-        let separator = `| :--- | :--- | ${langs.map(() => ':---').join(' | ')} |\n`;
-        let rows = "";
+        manifest.icons.forEach(iconName => {
+            const tr = document.createElement('tr');
+            const translationKey = `game:wpSuggestion-${iconName}`;
+            const iconPath = `../More Waypoint Icons/assets/mwi/textures/icons/worldmap/${iconName}.svg`;
+            
+            let rowHtml = `
+                <td class="icon-column">
+                    <div class="icon-info">
+                        <div class="icon-preview">
+                            <img src="${iconPath}" alt="" width="32" height="32" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        <div class="name-wrapper">
+                            <span class="file-name">${iconName}</span>
+                            <span class="translation-key">${translationKey}</span>
+                        </div>
+                    </div>
+                </td>
+            `;
 
-        // 4. Iteracja po ikonach i dopasowanie tłumaczeń
-        icons.forEach(iconName => {
-            // Tutaj zakładam schemat klucza: "worldmap-icon-" + nazwa
-            // Jeśli Twoje klucze wyglądają inaczej, zmień tę zmienną:
-            const translationKey = `worldmap-icon-${iconName}`;
-            
-            let row = `| **${iconName}** | \`${translationKey}\` `;
-            
-            langs.forEach(lang => {
-                const translation = langMaps[lang][translationKey] || "❌ BRAK";
-                row += ` | ${translation}`;
+            let rowHasMissing = false;
+            sortedLangs.forEach(lang => {
+                const isMissing = !(langData[lang] && langData[lang][translationKey]);
+                if (isMissing) rowHasMissing = true;
+
+                const val = isMissing ? 'MISSING' : langData[lang][translationKey];
+                rowHtml += `<td class="translation-cell ${isMissing ? 'missing' : ''}">${val}</td>`;
             });
-            
-            rows += row + " |\n";
+
+            tr.innerHTML = rowHtml;
+            if (rowHasMissing) tr.setAttribute('data-missing', 'true');
+            tbody.appendChild(tr);
         });
 
-        // 5. Zapis do pliku
-        fs.writeFileSync(PATHS.output, header + separator + rows, 'utf8');
-        
-        console.log(`✅ Tabela wygenerowana! Sprawdź plik: ${PATHS.output}`);
+        stats.innerHTML = `<span>Icons: <b>${iconCount}</b></span> <span>Languages: <b>${sortedLangs.length}</b></span>`;
+        document.getElementById('mainTable').style.display = 'table';
+
+        const applyFilters = () => {
+            const term = searchInput.value.toLowerCase();
+            const onlyMissing = filterStatus.checked;
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (const row of rows) {
+                const text = row.textContent.toLowerCase();
+                const isMissingRow = row.hasAttribute('data-missing');
+                const matchesSearch = text.includes(term);
+                const matchesStatus = !onlyMissing || isMissingRow;
+                row.classList.toggle('hidden', !(matchesSearch && matchesStatus));
+            }
+        };
+
+        searchInput.addEventListener('input', applyFilters);
+        filterStatus.addEventListener('change', applyFilters);
 
     } catch (err) {
-        console.error('❌ Błąd podczas generowania tabeli:', err.message);
+        stats.innerHTML = `<span style="color:var(--missing)">Error: ${err.message}</span>`;
     }
 }
 
-generateTable();
+// Start aplikacji
+init();
