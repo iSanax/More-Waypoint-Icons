@@ -24,23 +24,25 @@
         }
 
         .container { 
-            max-width: 1200px; 
+            width: 95vw; /* Zmiana z max-width na szerokość zależną od ekranu */
             margin: 0 auto; 
             background: var(--panel); 
             border-radius: 12px; 
-            overflow: hidden;
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh; /* Zapobiega uciekaniu tabeli poza dół ekranu */
         }
 
         .header-section {
             padding: 25px;
             background: rgba(255,255,255,0.02);
             border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
         h1 { margin: 0 0 10px 0; font-size: 1.5rem; color: var(--accent); }
-
         .stats { font-size: 0.85rem; color: var(--text-dim); display: flex; gap: 20px; }
 
         .search-bar-area {
@@ -49,12 +51,13 @@
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .search-container { 
             width: 350px; 
             flex-shrink: 0;
-            margin-right: 50px; /* ODSTĘP TUTAJ */
+            margin-right: 30px; 
         }
 
         #searchInput, #filterStatus {
@@ -66,17 +69,24 @@
             color: var(--text-main);
             font-size: 0.85rem;
             outline: none;
-            transition: border-color 0.2s;
         }
 
         #filterStatus { width: 220px; cursor: pointer; }
 
-        #searchInput:focus, #filterStatus:focus { border-color: var(--accent); }
+        /* KONTENER NA TABELĘ Z SUWAKIEM */
+        .table-wrapper {
+            overflow: auto; /* Włącza suwaki jeśli tabela jest za szeroka lub za długa */
+            background: var(--panel);
+        }
 
-        table { width: 100%; border-collapse: collapse; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            min-width: 1000px; /* Minimalna szerokość, by kolumny nie były zbyt ciasne */
+        }
         
         th { 
-            background: rgba(0,0,0,0.2); 
+            background: #1e293b; 
             text-align: left; 
             padding: 15px; 
             border-bottom: 2px solid var(--border);
@@ -85,7 +95,7 @@
             z-index: 10;
         }
 
-        .th-content { display: flex; flex-direction: column; gap: 5px; }
+        .th-content { display: flex; flex-direction: column; gap: 5px; min-width: 120px; }
         .lang-name { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); }
         .lang-perc { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
         
@@ -94,7 +104,7 @@
 
         td { padding: 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 
-        .icon-info { display: flex; align-items: center; gap: 15px; }
+        .icon-info { display: flex; align-items: center; gap: 15px; min-width: 300px; }
         
         .icon-preview {
             width: 40px;
@@ -106,6 +116,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .icon-preview img { max-width: 100%; max-height: 100%; }
@@ -114,11 +125,17 @@
         .file-name { font-weight: 600; font-size: 0.95rem; color: var(--text-main); }
         .translation-key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); opacity: 0.8; }
 
-        .translation-cell { font-size: 0.9rem; }
+        .translation-cell { font-size: 0.9rem; white-space: nowrap; }
         .missing { color: var(--missing); font-size: 0.8rem; font-weight: bold; }
 
         tr:hover { background: rgba(255,255,255,0.03); }
         tr.hidden { display: none; }
+
+        /* Stylizacja suwaka */
+        .table-wrapper::-webkit-scrollbar { width: 8px; height: 8px; }
+        .table-wrapper::-webkit-scrollbar-track { background: var(--bg); }
+        .table-wrapper::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        .table-wrapper::-webkit-scrollbar-thumb:hover { background: var(--accent); }
     </style>
 </head>
 <body>
@@ -141,14 +158,16 @@
         </div>
     </div>
 
-    <table id="mainTable" style="display:none;">
-        <thead>
-            <tr id="headerRow">
-                <th style="width: 350px;"><div class="th-content"><span class="lang-name">Ikona i Klucz</span></div></th>
-            </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
+    <div class="table-wrapper">
+        <table id="mainTable" style="display:none;">
+            <thead>
+                <tr id="headerRow">
+                    <th style="width: 350px;"><div class="th-content"><span class="lang-name">Ikona i Klucz</span></div></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
 </div>
 
 <script>
@@ -187,7 +206,7 @@
             }
 
             sortedLangs.forEach(lang => {
-                const s = langStats[lang];
+                const s = langStats[lang] || { percent: 0 };
                 const th = document.createElement('th');
                 th.innerHTML = `
                     <div class="th-content">
