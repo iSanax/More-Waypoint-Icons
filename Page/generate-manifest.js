@@ -22,6 +22,7 @@ function generate() {
         const manifest = {
             generatedAt: new Date().toLocaleString(),
             iconCount: icons.length,
+            sprawdzam: "CZY TO DZIALA",
             langs: langs,
             icons: icons
         };
